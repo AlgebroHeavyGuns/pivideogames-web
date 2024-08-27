@@ -1,7 +1,7 @@
 # Site settings
-title: Woolf Official Website # site title
+title: Pi Video Games Official Website # site title
 description: >- # site description
-  This is the official page of the Woolf video game developer.
+  This is the official page of the Pi Video Game studio. It is a indie video game studio located on Malaga, Spain.
 lang: en-US # default lang
 timezone: Europe/Madrid # default timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
@@ -9,19 +9,14 @@ mode: dark # default theme "dark" | "light"
 
 # Profile settings
 author:
-  name: Woolf # author name
+  name: Algebrodev and Woolf # authors name
   bio: >- # tell to the world
-    Game Developer - Indie Game Developer - Game Designer - Game Programmer - Pixel Artist
-  username: WoolfDev # general username
-  github: WoolfDeveloper # github username
-  twitter: WoolfDev # twitter username
-  instagram: woolf.css # facebook username
-  email: lluclanser@gmail.com # email adress
-  avatar: /assets/img/Woolficon.png # change with your own avatar
-  itchio_url: https://woolf-ux.itch.io # itch.io url 
+    - Indie Video Game Studio -
+  email-contacto: contacto@pivideogames.es # email adress
+  avatar: /assets/img/PiVideoGamesAvatar.png # change with your own avatar
 
 # URL settings
-url: "https://woolfgamedev.com" #
+url: "https://www.jekyll.pivideogames.es" #
 baseurl:
 permalink: /:title/
 google_analytics: # leave it blank if not wish

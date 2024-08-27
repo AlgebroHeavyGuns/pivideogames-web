@@ -1,0 +1,84 @@
+// Fonts preferences
+$sans-family: Roboto, sans-serif;
+$mono-family: Consolas, monospace;
+$primary-font: "jetbrains_mono";
+$whacky-family: "whacky_joe";
+$test-family: "retro_future";
+$base-font-size: 14px;
+$medium-font-size: $base-font-size * 0.938;
+$small-font-size: $base-font-size * 0.875;
+$base-line-height: 1.85;
+
+// Author variables
+$author-font-size: 16px;
+
+// Font weight
+// $light-weight: 300; // uncomment if necessary
+$normal-weight: 400;
+$bold-weight: 700;
+// $black-weight: 900; // uncomment if necessary
+
+//Light Colors
+$text-base-color: #434648;
+$text-link-blue: #003fff;
+$text-link-blue-active: #0036c7;
+
+$black: #0d122b;
+$light: #ececec;
+$smoke: #d2c7c7;
+$gray: #6b7886;
+$white: #fff;
+
+// Dark Colors
+$dark-text-base-color: #c7bebe;
+$dark-text-link-blue: #ff5277;
+$dark-text-link-blue-active: #ff2957;
+
+$dark-black: #131418;
+$dark-white: #eaeaea;
+$dark-light: #1b1d25;
+$dark-smoke: #4a4d56;
+$dark-gray: #767f87;
+
+// Width of the content area
+$wide-size: 890px;
+$narrow-size: 720px;
+
+// Padding unit
+$spacing-full: 30px;
+$spacing-half: $spacing-full / 2;
+
+// State of devices
+$on-mobile: 768px;
+$on-tablet: 769px;
+$on-desktop: 1024px;
+$on-widescreen: 1152px;
+
+// Social Media Image Routes
+$dark-twitch-icon: url("../../assets/icons/social-media/white/twitch-icon-white.webp");
+$dark-twitter-icon: url("../../assets/icons/social-media/white/twitter-icon-white.webp");
+$dark-discord-icon: url("../../assets/icons/social-media/white/discord-icon-white.webp");
+$dark-youtube-icon: url("../../assets/icons/social-media/white/youtube-icon-white.webp");
+$dark-instagram-icon: url("../../assets/icons/social-media/white/insta-icon-white.webp");
+$dark-itch-icon: url("../../assets/icons/social-media/white/itch-icon-white.webp");
+
+$twitch-icon: url("../../assets/icons/social-media/dark/twitch-icon-dark.webp");
+$twitter-icon: url("../../assets/icons/social-media/dark/twitter-icon-dark.webp");
+$discord-icon: url("../../assets/icons/social-media/dark/discord-icon-dark.webp");
+$youtube-icon: url("../../assets/icons/social-media/dark/youtube-icon-dark.webp");
+$instagram-icon: url("../../assets/icons/social-media/dark/insta-icon-dark.webp");
+$itch-icon: url("../../assets/icons/social-media/dark/itch-icon-dark.webp");
+
+@mixin media-query($device) {
+  @media screen and (max-width: $device) {
+    @content;
+  }
+}
+
+@mixin relative-font-size($ratio) {
+  font-size: $base-font-size * $ratio;
+}
+
+// Import sass files
+@import "styles/fonts", "styles/base", "styles/layout", "styles/post",
+  "styles/miscellaneous", "styles/syntax", "styles/dark", "styles/helper";

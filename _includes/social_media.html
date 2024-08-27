@@ -1,0 +1,15 @@
+<div class="social-media-container">
+    <h3 class="social-media-title">My Social Media</h3>
+    <div class="social-media">
+        {%- assign socialmedias = site.data.social-media -%}
+        {%- if socialmedias -%}
+            {%- for socialmedia in socialmedias -%}
+                {%- if socialmedia.external -%}
+                    <a class="social-icon {{ socialmedia.class }}" href="{{ socialmedia.url }}" target="_blank"></a>
+                {%- else -%}
+                    <a class="social-icon {{ socialmedia.class }}" href="{{ socialmedia.url }}"></a>
+                {%- endif -%}
+            {%- endfor -%}
+        {%- endif -%}
+    </div>
+</div>

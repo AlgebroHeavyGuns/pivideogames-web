@@ -1,0 +1,116 @@
+---
+title: Contact
+permalink: /contact/
+layout: page
+excerpt: Contact page.
+comments: false
+---
+<div class="wrapper">
+    <div class="contact-form">
+        <div class="contact-msg">
+            <div class="neutral-msg d-none"></div>
+            <div class="error-msg d-none"></div>
+            <div class="success-msg d-none"></div>
+        </div>
+        <!-- TEST ACTION: https://formkeep.com/f/623a08e5006a -->
+        <!-- REAL ACTION: https://formkeep.com/f/918dc554cfa6 -->
+        <form id="contact-form" action="https://formkeep.com/f/918dc554cfa6" accept-charset="UTF-8" enctype="multipart/form-data" method="POST">
+            <input type="hidden" name="utf8" value="✓">
+            <div class="name-and-mail">
+                <div class="form-section">
+                    <label for="user-name">Name / Nickname *</label>
+                    <input type="text" id="user-name" name="name" placeholder="John Doe">
+                </div>
+
+                <div class="form-section">
+                    <label for="email-address">Email Address *</label>
+                    <input type="email" id="email-address" name="email" placeholder="johndoe@woolfgamedev.com">
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label for="user-message">Message *</label>
+                <textarea id="user-message" name="message" placeholder="Hello..."></textarea>
+            </div>
+
+            <div class="flex-justify-center">
+                <button type="submit">Send</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', contactFormSubmit);
+    });
+
+    const successMsg = "Sending message...";
+    const validatingMsg = "Validating... ";
+    const allOKMsg = "Successful...";
+    const validationErrorMsg = "Unsuccessful...";
+
+    async function contactFormSubmit(event) {
+        event.preventDefault();
+        console.log('Form submit event prevented');
+
+        resetMessages();
+
+        const userNameInput = document.getElementById('user-name');
+        const emailAddressInput = document.getElementById('email-address');
+        const userMessageInput = document.getElementById('user-message');
+
+        const neutralMsgElement = document.querySelector('.neutral-msg');
+        const errorMsgElement = document.querySelector('.error-msg');
+        const successMsgElement = document.querySelector('.success-msg');
+
+        await showMessage(neutralMsgElement, validatingMsg);
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        if (userNameInput.value.trim() === '' || emailAddressInput.value.trim() === '' || userMessageInput.value.trim() === '') {
+            await showMessage(errorMsgElement, validationErrorMsg);
+            return;
+        }
+
+        await showMessage(successMsgElement, allOKMsg);
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        resetMessages();
+
+        await showMessage(successMsgElement, successMsg);
+
+        await new Promise(resolve => setTimeout(resolve, 1000));
+
+        this.submit();
+    }
+
+    async function showMessage(element, phrase) {
+        element.classList.remove('d-none');
+        const intervalValue = 50;
+        let idx = 0;
+        const interval = setInterval(() => {
+            if (idx < phrase.length) {
+                element.textContent += phrase[idx];
+                idx++;
+            } else {
+                clearInterval(interval);
+            }
+        }, intervalValue);
+
+        return new Promise(resolve => {
+            setTimeout(resolve, phrase.length * intervalValue);
+        });
+    }
+
+    function resetMessages() {
+        document.querySelector('.neutral-msg').textContent = '';
+        document.querySelector('.neutral-msg').classList.add('d-none');
+        document.querySelector('.error-msg').textContent = '';
+        document.querySelector('.error-msg').classList.add('d-none');
+        document.querySelector('.success-msg').textContent = '';
+        document.querySelector('.success-msg').classList.add('d-none');
+    }
+</script>

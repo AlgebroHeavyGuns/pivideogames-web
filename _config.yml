@@ -13,7 +13,7 @@ author:
   bio: >- # tell to the world
     - Indie Video Game Studio -
   email-contacto: contacto@pivideogames.es # email adress
-  avatar: /assets/img/PiVideoGamesAvatar.png # change with your own avatar
+  avatar: /assets/img/pivideogames_logo_fondo_forced_500x500.png # change with your own avatar 
 
 # URL settings
 url: "https://www.jekyll.pivideogames.es" #

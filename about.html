@@ -1,0 +1,32 @@
+---
+title: About Us
+permalink: /about/
+layout: page
+excerpt: About Pivideogames Studio
+comments: false
+---
+
+<div class="about-us">
+	{% assign sections = site.data.about-us-info %}
+	{% if sections %}
+		{% for info in sections %}
+			<section class="about-us-section">
+				<div class="content">
+					<div class="image-container">
+						<img src="{{ info.image }}">
+					</div>
+					<div class="info-content">
+						<h3 class="title">
+							{{ info.title }}
+						</h3>
+						<div class="description">
+							{{ info.desc }}
+						</div>
+					</div>
+				</div>
+			</section>
+		{% endfor %}
+	{% else %}
+
+	{% endif %}
+</div>

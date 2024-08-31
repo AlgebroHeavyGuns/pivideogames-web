@@ -382,3 +382,42 @@
     background-color: rgba(128, 128, 128, 0.1);
   }
 }
+
+.about-us-section {
+
+  .content {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      @include media-query($on-mobile) {
+        grid-template-columns: 1fr;
+      }
+
+      .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4rem;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+
+      }
+
+      .info-content {
+
+        .title {
+          font-size: 2em;
+          font-weight: 800;
+          text-align: start;
+          margin-bottom: 1rem;
+          padding: 0px 1rem;
+        }
+
+      }
+  }
+
+
+}

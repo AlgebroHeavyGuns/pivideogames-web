@@ -2,10 +2,15 @@
 title: Pi Video Games Official Website # site title
 description: >- # site description
   This is the official page of the Pi Video Game studio. It is a indie video game studio located on Malaga, Spain.
-lang: en-US # default lang
 timezone: Europe/Madrid # default timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
 mode: dark # default theme "dark" | "light"
+
+# Language settings
+lang: es # default lang
+languages: ["es", "en"] # languages
+exclude_from_localizations: ["javascript", "images", "css",  "scss"] # files or folders to exclude from localization
+default_locale_in_subfolder: false
 
 # Profile settings
 author:
@@ -83,3 +88,4 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-postfiles
+  - jekyll-multiple-languages-plugin

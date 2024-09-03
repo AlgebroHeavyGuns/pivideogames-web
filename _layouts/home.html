@@ -4,14 +4,14 @@ home: true
 ---
 
 <div>
-  <h2 style="text-align: center;">Pi Video Games Official Website</h2>
-  <h3>Next project:</h3>
+  <h2 style="text-align: center;">{% t home.title %}</h2>
+  <h3>{% t home.next_project %}:</h3>
 </div>
 {%- include steam_section.html steam_code="2960010" -%}
 
 {%- include social_media.html -%}
 
-<!-- <h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
+<!-- <h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>  
 {%- for post in site.posts limit: site.number_of_posts -%}
 <article class="post-item">
   <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>

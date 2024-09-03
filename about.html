@@ -12,10 +12,14 @@ comments: false
 		{% for info in sections %}
 			<section class="about-us-section">
 				<div class="content">
-					<div class="image-container">
-						<img src="{{ info.image }}">
+					<div class="image-container {{ info.right_or_left }}">
+						{% if info.img_max_height %}
+							<img src="{{ info.image }}" style="max-height: {{ info.img_max_height }}; width: auto;">
+						{% else %}
+							<img src="{{ info.image }}">
+						{% endif %}
 					</div>
-					<div class="info-content">
+					<div class="info-content {{ info.right_or_left }}">
 						<h3 class="title">
 							{{ info.title }}
 						</h3>

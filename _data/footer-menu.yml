@@ -1,0 +1,7 @@
+- title: navbar.tags
+  url: /tags/
+  external: false
+  
+- title: navbar.thanks
+  url: /thanks/
+  external: false

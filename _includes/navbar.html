@@ -49,18 +49,18 @@
         {%- if menus %}
           {%- for menu in menus -%}
             {%- if url == menu.url -%}
-              <a class="menu-link active" href="{{ menu.url }}">{{ menu.title }}</a>
+              <a class="menu-link active" href="{{ menu.url }}">{% t menu.title %}</a>
             {%- else -%}
               {%- if menu.external -%}
-                <a class="menu-link" href="{{ menu.url }}" target="_blank" rel="noopener">{{ menu.title }}</a>
+                <a class="menu-link" href="{{ menu.url }}" target="_blank" rel="noopener">{% t menu.title %}</a>
               {%- else -%}
-                <a class="menu-link" href="{{ menu.url }}">{{ menu.title }}</a>
+                <a class="menu-link" href="{{ menu.url }}">{% t menu.title %}</a>
               {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
         {%- else -%}
-          <a class="menu-link {% if url == '/' %}active{% endif %}" href="/">home</a>
-          <a class="menu-link {% if url == '/about/' %}active{% endif %}" href="/about">about</a>
+          <a class="menu-link {% if url == '/' %}active{% endif %}" href="/">{% t navbar.home %}</a>
+          <a class="menu-link {% if url == '/about/' %}active{% endif %}" href="/about">{% t navbar.about %}</a>
         {%- endif -%}
       </div>
     </div>

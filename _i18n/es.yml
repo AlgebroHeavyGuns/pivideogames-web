@@ -1,6 +1,23 @@
 global:
   studio: Pi Video Games Sitio Web Oficial
 
+pagetitles:
+  about: Sobre nosotros
+  contact: Contacto
+  projects: Proyectos
+  thanks: Agradecimientos
+  error_404: Te has perdido ¿no?
+  tags: Etiquetas
+
 home:
   title: Pi Video Games Sitio Web Oficial
   next_project: Siguiente proyecto
+
+social_media:
+  title: Nuestras redes sociales
+
+navbar:
+  home: Inicio
+  about: Sobre nosotros
+  projects: Proyectos
+  contact: Contacto

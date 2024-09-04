@@ -1,6 +1,23 @@
 global:
   studio: Pi Video Games Official Website
 
+pagetitles:
+  about: About us
+  contact: Contact
+  projects: Projects
+  thanks: Acknowledgements
+  error_404: You're lost aren't you?
+  tags: Tags
+
 home:
   title: Pi Video Games Official Website
   next_project: Next project
+
+social_media:
+  title: Our social media
+
+navbar:
+  home: Home
+  about: About us
+  projects: Projects
+  contact: Contact

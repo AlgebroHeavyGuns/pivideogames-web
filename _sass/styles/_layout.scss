@@ -530,3 +530,17 @@
     }
   }
 }
+
+.mini-about-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: $md-wide-size;
+  margin: auto;
+
+  p {
+    text-align: justify;
+  }
+
+}

@@ -543,3 +543,59 @@ mark,
 .d-none {
   display: none;
 }
+
+// Helpers
+
+.sm-primary-button {
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px $black;
+  padding: 4px;
+  background-color: $text-link-blue;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $text-link-blue-active;
+    color: $white;
+  }
+}
+
+.md-primary-button {
+  border-radius: 4px;
+  box-shadow: 1px 1px 2px $black;
+  padding: 8px;
+  background-color: $text-link-blue;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $text-link-blue-active;
+    color: $white;
+  }
+}
+
+.lg-primary-button {
+  border-radius: 8px;
+  box-shadow: 1px 1px 2px $black;
+  padding: 12px;
+  background-color: $text-link-blue;
+  color: $white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 14px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: $text-link-blue-active;
+    color: $white;
+  }
+}

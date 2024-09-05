@@ -323,6 +323,36 @@ body[data-theme="dark"] {
     }
   }
 
+  // Helpers
+  
+  .sm-primary-button {
+    background-color: $dark-text-link-blue;
+    color: $dark-white;
+  
+    &:hover {
+      background-color: $dark-text-link-blue-active;
+      color: $dark-white;
+    }
+  }
+  
+  .md-primary-button {
+    background-color: $dark-text-link-blue;
+    color: $dark-white;
+  
+    &:hover {
+      background-color: $dark-text-link-blue-active;
+      color: $dark-white;
+    }
+  }
+  
+  .lg-primary-button {
+    background-color: $dark-text-link-blue;
+    color: $dark-white;
+  
+    &:hover {
+      background-color: $dark-text-link-blue-active;
+      color: $dark-white;
+    }
+  }
 }
-
 

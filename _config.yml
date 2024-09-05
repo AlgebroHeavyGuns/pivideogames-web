@@ -7,7 +7,7 @@ image: assets/img/ogp.png # This image used for Open Graph more info https://ogp
 mode: dark # default theme "dark" | "light"
 
 # Language settings
-lang: es # default lang
+lang: es # dynamic language
 languages: ["es", "en"] # languages
 exclude_from_localizations: ["javascript", "images", "css",  "scss"] # files or folders to exclude from localization
 default_locale_in_subfolder: false

@@ -498,6 +498,35 @@
         }
       }
   }
+}
 
+.language-switcher {
+  display: flex;
+  width: 50px;
+  float: left;
+  margin-left: 10px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 
+  @include media-query($on-mobile) {
+    margin-top: 5px;
+  }
+
+  a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: $navbar-link-color; // Puedes usar variables de color aquí
+    font-weight: bold;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: $navbar-link-hover-color; // Variable de color para hover
+    }
+
+    &.active {
+      color: $active-link-color; // Variable para el color del idioma activo
+      cursor: default;
+    }
+  }
 }

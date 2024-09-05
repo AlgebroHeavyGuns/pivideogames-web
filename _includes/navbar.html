@@ -42,6 +42,17 @@
         <circle cx="256" cy="256" r="80" style="stroke-linecap:round;stroke-miterlimit:10;stroke-width:32px" />
       </svg>
     </a>
+    <div class="language-switcher">
+      {%- assign current_lang = site.lang -%}
+      {%- assign current_page = page.url -%}
+      {%- for lang in site.languages -%}
+        {%- if lang != current_lang -%} 
+          <a href="{% if lang == site.default_lang %}{{ current_page }}{% else %}/{{ lang }}{{ current_page }}{% endif %}">
+            {{ lang | upcase }}
+          </a>
+        {%- endif -%}
+      {%- endfor -%}
+    </div>
     <div class="trigger">
       <div class="trigger-container">
         {%- assign url = page.url -%}
@@ -49,12 +60,12 @@
         {%- if menus %}
           {%- for menu in menus -%}
             {%- if url == menu.url -%}
-              <a class="menu-link active" href="{{ menu.url }}">{% t menu.title %}</a>
+              <a class="menu-link active" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">{% t menu.title %}</a>
             {%- else -%}
               {%- if menu.external -%}
                 <a class="menu-link" href="{{ menu.url }}" target="_blank" rel="noopener">{% t menu.title %}</a>
               {%- else -%}
-                <a class="menu-link" href="{{ menu.url }}">{% t menu.title %}</a>
+                <a class="menu-link" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">{% t menu.title %}</a>
               {%- endif -%}
             {%- endif -%}
           {%- endfor -%}

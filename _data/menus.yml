@@ -3,7 +3,7 @@
   external: false
 
 - title: navbar.projects
-  url: /devlogs/
+  url: /projects/
   external: false
 
 - title: navbar.about

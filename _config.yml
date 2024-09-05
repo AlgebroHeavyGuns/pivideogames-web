@@ -1,8 +1,6 @@
 # Site settings
 title: metadata.title # site title
-description: >- # site description
-  This is the official page of the Pi Video Game studio. It is a indie video game studio located on Malaga, Spain.
-  Este es el sitio web oficial de la Pi Video Games. Es una estudio de videojuegos indies ubicada en Malaga, España.
+description: metadata.desc # site description
 timezone: Europe/Madrid # default timezone
 image: assets/img/ogp.png # This image used for Open Graph more info https://ogp.me/
 mode: dark # default theme "dark" | "light"
@@ -10,7 +8,7 @@ mode: dark # default theme "dark" | "light"
 # Language settings
 lang: es # dynamic language
 languages: ["es", "en"] # languages
-exclude_from_localizations: ["javascript", "images", "css",  "scss"] # files or folders to exclude from localization
+exclude_from_localizations: ["javascript", "images", "css",  "scss"] # files or folders t o exclude from localization
 default_locale_in_subfolder: false
 
 # Profile settings

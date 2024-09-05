@@ -29,14 +29,7 @@
         | remove: '.html'
     }}" />
   {% endif %}
-  <meta name="description" content="{{
-      page.description
-        | default: site.description
-        | strip_html
-        | normalize_whitespace
-        | truncate: 200
-        | escape
-    }}" />
+  <meta name="description" content="{% t site.description %}" />
   <meta name="referrer" content="no-referrer-when-downgrade" />
   <meta property="fb:app_id" content="{{ site.fb_appid }}" />
   <meta property="og:site_name" content="{% if page.title %}{% t page.title %} | {{
@@ -54,14 +47,7 @@
   <meta property="og:url" content="{{
       page.url | remove: 'index.html' | remove: '.html' | absolute_url
     }}" />
-  <meta property="og:description" content="{{
-      page.description
-        | default: site.description
-        | strip_html
-        | normalize_whitespace
-        | truncate: 200
-        | escape
-    }}" />
+  <meta property="og:description" content="{% t site.description %}" />
   {% if page.image %}
   <meta property="og:image" content="{{ page.image | absolute_url }}" />
   {% else %}
@@ -78,14 +64,7 @@
     }}" />
   <meta name="twitter:site" content="@{{ site.author.twitter }}" />
   <meta name="twitter:creator" content="@{{ site.author.twitter }}" />
-  <meta name="twitter:description" content="{{
-      page.description
-        | default: site.description
-        | strip_html
-        | normalize_whitespace
-        | truncate: 200
-        | escape
-    }}" />
+  <meta name="twitter:description" content="{% t site.description %}" />
   {% if page.image %}
   <meta name="twitter:image" content="{{ page.image | absolute_url }}" />
   {% else %}

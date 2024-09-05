@@ -4,12 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="application-name" content="{{ site.title }}" />
+  <meta name="application-name" content="{% t site.title %}" />
   <meta name="apple-mobile-web-app-status-bar-style" content="#fff" />
-  <meta name="apple-mobile-web-app-title" content="{{ site.title }}" />
+  <meta name="apple-mobile-web-app-title" content="{% t site.title %}" />
   <title>
-    {% if page.title %} {% t page.title %} - {{ site.title }}{% else %}{{
-    site.title | escape }}{% endif %}
+    {% if page.title %} {% t page.title %} - {% t site.title %}{% else %}{% t site.title %}{% endif %}
   </title>
   <link rel="alternate" href="{{
       page.url | remove: 'index.html' | remove: '.html' | absolute_url
@@ -42,10 +41,10 @@
   <meta property="fb:app_id" content="{{ site.fb_appid }}" />
   <meta property="og:site_name" content="{% if page.title %}{% t page.title %} | {{
       site.author.name
-    }}{% else %}{{ site.title | escape }}{% endif %}" />
+    }}{% else %}{% t site.title %}{% endif %}" />
   <meta property="og:title" content="{% if page.title %}{% t page.title %} | {{
       site.author.name
-    }}{% else %}{{ site.title | escape }}{% endif %}" />
+    }}{% else %}{% t site.title %}{% endif %}" />
   {% if page.location %}
   <meta property="og:type" content="article" />
   <meta property="article:publisher" content="https://web.facebook.com/{{ site.author.facebook }}" />
@@ -73,7 +72,7 @@
   <meta name="twitter:card" content="summary" />
   <meta name="twitter:title" content="{% if page.title %}{% t page.title %} | {{
       site.author.twitter
-    }}{% else %}{{ site.title | escape }}{% endif %}" />
+    }}{% else %}{% t site.title %}{% endif %}" />
   <meta name="twitter:url" content="{{
       page.url  | remove: 'index.html' | remove: '.html' | absolute_url
     }}" />

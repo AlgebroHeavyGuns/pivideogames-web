@@ -10,7 +10,7 @@ pagetitles:
   contact: Contacto
   projects: Proyectos
   thanks: Agradecimientos
-  error_404: Te has perdido ¿no?
+  error_404: Te has perdido ¿no? | You're lost aren't you?
   tags: Etiquetas
 
 home:

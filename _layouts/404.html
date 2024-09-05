@@ -27,19 +27,17 @@ layout: compress
 
     setTimeout(() => body.classList.remove("notransition"), 75);
   </script>
-
-  {% include navbar.html %}
+  
   <div class="wrapper">
     <main aria-label="Content">
       <div class="not-found">
         <div class="container">
           <div class="title">404</div>
-          <p class="phrase">😕 Hmm... Seems you lost from my journey.</p>
-          <a class="solution" href="{{ site.url }}">back home</a>
+          <p class="phrase">😕 Hmm... Parece que me he perdido. | 😕 Hmm... Seems you lost from my journey.</p>
+          <a class="solution" href="{{ site.url }}">Volver a la home</a> | <a class="solution" href="{{ site.url }}/en/">back home</a>
         </div>
       </div>
     </main>
-    {% include footer.html %}
   </div>
 
 </body>

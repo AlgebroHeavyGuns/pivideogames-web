@@ -87,4 +87,3 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-postfiles
-  - jekyll-multiple-languages-plugin

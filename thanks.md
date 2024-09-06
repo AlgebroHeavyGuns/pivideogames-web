@@ -6,4 +6,4 @@ excerpt: Thank you so much to everyone who has helped me, supported me and made 
 comments: false
 ---
 
-{% t thanks_page.description %}
+{% translate thanks_page.description %}

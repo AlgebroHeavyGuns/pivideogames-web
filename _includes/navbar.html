@@ -60,18 +60,18 @@
         {%- if menus %}
           {%- for menu in menus -%}
             {%- if url == menu.url -%}
-              <a class="menu-link active" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">{% t menu.title %}</a>
+              <a class="menu-link active" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">{% translate menu.title %}</a>
             {%- else -%}
               {%- if menu.external -%}
-                <a class="menu-link" href="{{ menu.url }}" target="_blank" rel="noopener">{% t menu.title %}</a>
+                <a class="menu-link" href="{{ menu.url }}" target="_blank" rel="noopener">{% translate menu.title %}</a>
               {%- else -%}
-                <a class="menu-link" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">{% t menu.title %}</a>
+                <a class="menu-link" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">{% translate menu.title %}</a>
               {%- endif -%}
             {%- endif -%}
           {%- endfor -%}
         {%- else -%}
-          <a class="menu-link {% if url == '/' %}active{% endif %}" href="/">{% t navbar.home %}</a>
-          <a class="menu-link {% if url == '/about/' %}active{% endif %}" href="/about">{% t navbar.about %}</a>
+          <a class="menu-link {% if url == '/' %}active{% endif %}" href="/">{% translate navbar.home %}</a>
+          <a class="menu-link {% if url == '/about/' %}active{% endif %}" href="/about">{% translate navbar.about %}</a>
         {%- endif -%}
       </div>
     </div>

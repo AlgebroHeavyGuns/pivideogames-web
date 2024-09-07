@@ -8,7 +8,7 @@ source "https://rubygems.org"
 #
 # This will help ensure the proper Jekyll version is running.
 # Happy Jekylling!
-gem "jekyll", "~> 3.10.0"
+gem "jekyll", "~> 4.3.3"
 
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 
@@ -18,13 +18,12 @@ gem "jekyll", "~> 3.10.0"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
-  gem 'github-pages', '~> 232'
   gem 'jekyll-feed', '~> 0.13'
   gem 'jekyll-sitemap', '~> 1.4'
   gem 'jekyll-compose', '~> 0.12.0'
   gem 'jekyll-postfiles', '~> 3.1'
   gem 'kramdown-parser-gfm', '~> 1.1'
-  gem "jekyll-polyglot", "~> 1.5.0"
+  gem "jekyll-polyglot"
   gem 'faraday-retry'
 end
 

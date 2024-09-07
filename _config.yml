@@ -20,7 +20,7 @@ author:
   avatar: /assets/img/pivideogames_logo_fondo_forced_500x500.png # change with your own avatar 
 
 # URL settings
-url: "https://www.jekyll.pivideogames.es" #
+url: "https://jekyll.pivideogames.es" #
 baseurl:
 permalink: /:title/
 google_analytics: # leave it blank if not wish

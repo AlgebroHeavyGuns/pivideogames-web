@@ -23,7 +23,7 @@ group :jekyll_plugins do
   gem 'jekyll-compose', '~> 0.12.0'
   gem 'jekyll-postfiles', '~> 3.1'
   gem 'kramdown-parser-gfm', '~> 1.1'
-  gem "jekyll-polyglot"
+  gem "jekyll-polyglot", "~> 1.5.0"
   gem 'faraday-retry'
 end
 

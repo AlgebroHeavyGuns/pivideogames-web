@@ -21,10 +21,10 @@ comments: false
 					</div>
 					<div class="info-content {{ info.right_or_left }}">
 						<h3 class="title">
-							{% t  info.title %}
+							{{ site.data[site.active_lang][info.title] }}
 						</h3>
 						<div class="description">
-							{% t  info.desc %}
+							{{ site.data[site.active_lang][info.desc] }}
 						</div>
 					</div>
 				</div>

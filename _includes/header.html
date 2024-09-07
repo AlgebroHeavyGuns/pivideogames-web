@@ -1,14 +1,16 @@
+{% assign translate = site.data.i18n[site.active_lang] %}
+
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="application-name" content="{% t  site.title %}" />
+  <meta name="application-name" content="{{ translate[site.title] }}" />
   <meta name="apple-mobile-web-app-status-bar-style" content="#fff" />
-  <meta name="apple-mobile-web-app-title" content="{% t  site.title %}" />
+  <meta name="apple-mobile-web-app-title" content="{{ translate[site.title] }}" />
   <title>
-    {% if page.title %} {% t  page.title %} - {% t  site.title %}{% else %}{% t  site.title %}{% endif %}
+    {% if page.title %} {{ translate[page.title] | escape }} - {{ translate[site.title] }}{% else %}{{ translate[site.title] }}{% endif %}
   </title>
   <link rel="alternate" href="{{
       page.url | remove: 'index.html' | remove: '.html' | absolute_url
@@ -29,15 +31,20 @@
         | remove: '.html'
     }}" />
   {% endif %}
-  <meta name="description" content="{% t  site.description %}" />
+  <meta name="description" content="{{ translate[page.description]
+  | default: translate[site.description]
+  | strip_html
+  | normalize_whitespace
+  | truncate: 200
+  | escape }}" />
   <meta name="referrer" content="no-referrer-when-downgrade" />
-  <meta property="fb:app_id" content="{{ site.fb_appid }}" />
-  <meta property="og:site_name" content="{% if page.title %}{% t  page.title %} | {{
+  <meta property="fb:app_id" content="{{ site.fb_appid }}" /> 
+  <meta property="og:site_name" content="{% if page.title %}{{ translate[page.title] | escape }} | {{
       site.author.name
-    }}{% else %}{% t  site.title %}{% endif %}" />
-  <meta property="og:title" content="{% if page.title %}{% t  page.title %} | {{
+    }}{% else %}{{ translate[site.title] }}{% endif %}" />
+  <meta property="og:title" content="{% if page.title %}{{ translate[site.title] | escape }} | {{
       site.author.name
-    }}{% else %}{% t  site.title %}{% endif %}" />
+    }}{% else %}{{ translate[site.title] }}{% endif %}" />
   {% if page.location %}
   <meta property="og:type" content="article" />
   <meta property="article:publisher" content="https://web.facebook.com/{{ site.author.facebook }}" />
@@ -47,7 +54,12 @@
   <meta property="og:url" content="{{
       page.url | remove: 'index.html' | remove: '.html' | absolute_url
     }}" />
-  <meta property="og:description" content="{% t  site.description %}" />
+  <meta property="og:description" content="{{ translate[page.description]
+    | default: translate[site.description]
+    | strip_html
+    | normalize_whitespace
+    | truncate: 200
+    | escape }}" />
   {% if page.image %}
   <meta property="og:image" content="{{ page.image | absolute_url }}" />
   {% else %}
@@ -56,15 +68,20 @@
   <meta property="og:image:width" content="640" />
   <meta property="og:image:height" content="640" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{% if page.title %}{% t  page.title %} | {{
+  <meta name="twitter:title" content="{% if page.title %}{{ translate[page.title] | escape }} | {{
       site.author.twitter
-    }}{% else %}{% t  site.title %}{% endif %}" />
+    }}{% else %}{{ translate[site.title] }}{% endif %}" />
   <meta name="twitter:url" content="{{
       page.url  | remove: 'index.html' | remove: '.html' | absolute_url
     }}" />
   <meta name="twitter:site" content="@{{ site.author.twitter }}" />
   <meta name="twitter:creator" content="@{{ site.author.twitter }}" />
-  <meta name="twitter:description" content="{% t  site.description %}" />
+  <meta name="twitter:description" content="{{ translate[page.description]
+    | default: translate[site.description]
+    | strip_html
+    | normalize_whitespace
+    | truncate: 200
+    | escape }}" />
   {% if page.image %}
   <meta name="twitter:image" content="{{ page.image | absolute_url }}" />
   {% else %}

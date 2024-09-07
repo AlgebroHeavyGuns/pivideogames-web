@@ -6,9 +6,10 @@ image: assets/img/ogp.png # This image used for Open Graph more info https://ogp
 mode: dark # default theme "dark" | "light"
 
 # Language settings
-lang: es # dynamic language
 languages: ["es", "en"] # languages
-exclude_from_localizations: ["javascript", "images", "css",  "scss"] # files or folders t o exclude from localization
+default_lang: "es"
+exclude_from_localization: ["javascript", "images", "css", "public"]
+parallel_localization: false # put it in false if you are running in windows system | default in false, in true doesn't work
 default_locale_in_subfolder: false
 
 # Profile settings
@@ -87,3 +88,4 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
   - jekyll-postfiles
+  - jekyll-polyglot

@@ -1,5 +1,7 @@
 <div class="mini-about-us">
-	<h2>{% t  about_us.home_title %}</h2>
-	<p>{% t  about_us.home_desc %}</p>
-	<a class="md-primary-button" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}/about/">{% t  buttons.know_us %}</a>
-</div>
+	<h2>{{ site.data.i18n[site.active_lang].about_us.home_title }}</h2> 
+	<p>{{ site.data.i18n[site.active_lang].about_us.home_desc }}</p>
+	<a class="md-primary-button" href="{% if site.active_lang != site.default_lang %}/{{ site.active_lang }}{% endif %}/about/">
+		{{ site.data.i18n[site.active_lang].buttons.know_us }}
+	</a>
+</div> 

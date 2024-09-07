@@ -9,8 +9,7 @@ mode: dark # default theme "dark" | "light"
 languages: ["es", "en"] # languages
 default_lang: "es"
 exclude_from_localization: ["javascript", "images", "css", "public"]
-parallel_localization: false # put it in false if you are running in windows system | default in false, in true doesn't work
-default_locale_in_subfolder: false
+parallel_localization: true # put it in false if you are running in windows system | default in false, in true doesn't work
 
 # Profile settings
 author:

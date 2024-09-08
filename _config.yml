@@ -8,7 +8,7 @@ mode: dark # default theme "dark" | "light"
 # Language settings
 languages: ["es", "en"] # languages
 default_lang: "es"
-exclude_from_localization: ["javascript", "images", "css", "public"]
+exclude_from_localization: ["javascript", "images", "css", "public", "scss", "assets"]
 parallel_localization: false # put it in false if you are running in windows system | default in false, in true doesn't work
 
 # Profile settings

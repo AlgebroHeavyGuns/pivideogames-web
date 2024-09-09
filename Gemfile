@@ -23,8 +23,9 @@ group :jekyll_plugins do
   gem 'jekyll-compose', '~> 0.12.0'
   gem 'jekyll-postfiles', '~> 3.1'
   gem 'kramdown-parser-gfm', '~> 1.1'
-  gem "jekyll-polyglot"
-  gem "github-pages"
+  gem 'jekyll-polyglot'
+  gem 'github-pages'
+  gem 'jekyll-debug'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

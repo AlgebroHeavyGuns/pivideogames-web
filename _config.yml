@@ -81,6 +81,10 @@ exclude:
   - lighthouse.png
   - klise-*.gem
   - klise.gemspec
+  - vendor
+
+# Added temporary to avoid build error
+future: false
 
 # Plugins
 plugins:

@@ -1,4 +1,3 @@
-{% assign translate = site.data.i18n[site.active_lang] %}
 <div class="navbar" role="navigation">
   <nav class="menu">
     <input type="checkbox" id="menu-trigger" class="menu-trigger" />
@@ -44,7 +43,7 @@
       </svg>
     </a>
     <div class="language-switcher">
-      {%- assign current_lang = site.active_lang -%}
+      {%- assign current_lang = site.lang -%}
       {%- assign current_page = page.url -%}
       {%- for lang in site.languages -%}
         {%- if lang != current_lang -%} 
@@ -61,17 +60,17 @@
         {%- if menus %}
           {%- for menu in menus -%}
             {%- if url == menu.url -%}
-              <a class="menu-link active" href="{% if site.active_lang != site.default_lang %}/{{ site.active_lang }}{% endif %}{{ menu.url }}">
-                {{ site.data.i18n[site.active_lang][menu.title] }}
+              <a class="menu-link active" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">
+                {% t menu.title %}
               </a>
             {%- else -%}
               {%- if menu.external -%}
                 <a class="menu-link" href="{{ menu.url }}" target="_blank" rel="noopener">
-                  {{ site.data.i18n[site.active_lang][menu.title] }}
+                  {% t menu.title %}
                 </a>
               {%- else -%}
-                <a class="menu-link" href="{% if site.active_lang != site.default_lang %}/{{ site.active_lang }}{% endif %}{{ menu.url }}">
-                  {{ site.data.i18n[site.active_lang][menu.title] }}
+                <a class="menu-link" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">
+                  {% t menu.title %}
                 </a>
               {%- endif -%}
             {%- endif -%}

@@ -1,4 +1,22 @@
-{% assign translate = site.data.i18n[site.active_lang] %}
+{%- capture site_title -%}
+  {% t site.title %}
+{%- endcapture -%}
+
+{%- capture site_description -%}
+  {% t site.description %}
+{%- endcapture -%}
+
+{%- if page.title -%}
+  {%- capture page_title -%}
+    {% t page.title %}  
+  {%- endcapture -%}
+{%- endif -%}
+
+{%- if page.description -%}
+  {%- capture page_description -%}
+    {% t page.description %}
+  {%- endcapture -%}
+{%- endif -%}
 
 <head prefix="og: http://ogp.me/ns#">
   <meta charset="UTF-8" />
@@ -6,11 +24,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="application-name" content="{{ translate[site.title] }}" />
+  <meta name="application-name" content="{{ site_title }}" />
   <meta name="apple-mobile-web-app-status-bar-style" content="#fff" />
-  <meta name="apple-mobile-web-app-title" content="{{ translate[site.title] }}" />
+  <meta name="apple-mobile-web-app-title" content="{{ site_title }}" />
   <title>
-    {% if page.title %} {{ translate[page.title] | escape }} - {{ translate[site.title] }}{% else %}{{ translate[site.title] }}{% endif %}
+    {% if page.title %} {{ page_title | escape }} - {{ site_title }}{% else %}{{ site_title }}{% endif %}
   </title>
   <link rel="alternate" href="{{
       page.url | remove: 'index.html' | remove: '.html' | absolute_url
@@ -31,20 +49,20 @@
         | remove: '.html'
     }}" />
   {% endif %}
-  <meta name="description" content="{{ translate[page.description]
-  | default: translate[site.description]
+  <meta name="description" content="{{ page_description
+  | default: site_description
   | strip_html
   | normalize_whitespace
   | truncate: 200
   | escape }}" />
   <meta name="referrer" content="no-referrer-when-downgrade" />
   <meta property="fb:app_id" content="{{ site.fb_appid }}" /> 
-  <meta property="og:site_name" content="{% if page.title %}{{ translate[page.title] | escape }} | {{
+  <meta property="og:site_name" content="{% if page.title %}{{ page_title | escape }} | {{
       site.author.name
-    }}{% else %}{{ translate[site.title] }}{% endif %}" />
-  <meta property="og:title" content="{% if page.title %}{{ translate[site.title] | escape }} | {{
+    }}{% else %}{{ site_title }}{% endif %}" />
+  <meta property="og:title" content="{% if page.title %}{{ site_title | escape }} | {{
       site.author.name
-    }}{% else %}{{ translate[site.title] }}{% endif %}" />
+    }}{% else %}{{ site_title }}{% endif %}" />
   {% if page.location %}
   <meta property="og:type" content="article" />
   <meta property="article:publisher" content="https://web.facebook.com/{{ site.author.facebook }}" />
@@ -54,8 +72,8 @@
   <meta property="og:url" content="{{
       page.url | remove: 'index.html' | remove: '.html' | absolute_url
     }}" />
-  <meta property="og:description" content="{{ translate[page.description]
-    | default: translate[site.description]
+  <meta property="og:description" content="{{ page_description
+    | default: site_description
     | strip_html
     | normalize_whitespace
     | truncate: 200
@@ -68,16 +86,16 @@
   <meta property="og:image:width" content="640" />
   <meta property="og:image:height" content="640" />
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="{% if page.title %}{{ translate[page.title] | escape }} | {{
+  <meta name="twitter:title" content="{% if page.title %}{{ page_title | escape }} | {{
       site.author.twitter
-    }}{% else %}{{ translate[site.title] }}{% endif %}" />
+    }}{% else %}{{ site_title }}{% endif %}" />
   <meta name="twitter:url" content="{{
       page.url  | remove: 'index.html' | remove: '.html' | absolute_url
     }}" />
   <meta name="twitter:site" content="@{{ site.author.twitter }}" />
   <meta name="twitter:creator" content="@{{ site.author.twitter }}" />
-  <meta name="twitter:description" content="{{ translate[page.description]
-    | default: translate[site.description]
+  <meta name="twitter:description" content="{{ page_description
+    | default: site_description
     | strip_html
     | normalize_whitespace
     | truncate: 200

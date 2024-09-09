@@ -6,4 +6,4 @@ excerpt: Thank you so much to everyone who has helped me, supported me and made 
 comments: false
 ---
 
-{{ site.data[site.active_lang].thanks_page.description }}
+{% t thanks_page.description %}

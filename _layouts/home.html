@@ -4,8 +4,8 @@ home: true
 ---
 
 <div>
-  <h2 style="text-align: center;">{{ site.data.i18n[site.active_lang].home.title }}</h2>
-  <h3>{{ site.data.i18n[site.active_lang].home.next_project }}:</h3>
+  <h2 style="text-align: center;">{% t home.title %}</h2> 
+  <h3>{% t home.next_project %}:</h3>
 </div>
 
 {%- include steam_section.html steam_code="2960010" -%}

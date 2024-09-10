@@ -19,18 +19,14 @@ comments: false
 							<img src="{{ info.image }}">
 						{% endif %}
 					</div>
-					<div class="info-content {{ info.right_or_left }}">
-						<h3 class="title">
-							{% t info.title %}
-						</h3>
-						<div class="description">
-							{% t info.desc %}
-						</div>
+					<h3 class="title {{ info.right_or_left }}">
+						{% t info.title %}
+					</h3>
+					<div class="description {{ info.right_or_left }}">
+						{% t info.desc %}
 					</div>
 				</div>
 			</section>
 		{% endfor %}
-	{% else %}
-
 	{% endif %}
 </div>

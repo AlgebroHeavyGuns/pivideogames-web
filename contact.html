@@ -4,7 +4,7 @@ permalink: /contact/
 layout: page
 excerpt: Contact page.
 comments: false
----
+--- 
 <div class="wrapper">
     <div class="contact-form">
         <div class="contact-msg">
@@ -12,29 +12,43 @@ comments: false
             <div class="error-msg d-none"></div>
             <div class="success-msg d-none"></div>
         </div>
-        <!-- TEST ACTION: https://formkeep.com/f/623a08e5006a -->
-        <!-- REAL ACTION: https://formkeep.com/f/918dc554cfa6 -->
-        <form id="contact-form" action="https://formkeep.com/f/918dc554cfa6" accept-charset="UTF-8" enctype="multipart/form-data" method="POST">
+        <form id="contact-form" action="https://formkeep.com/f/786251b782ec?locale={{ site.lang }}" accept-charset="UTF-8" enctype="multipart/form-data" method="POST">
             <input type="hidden" name="utf8" value="✓">
-            <div class="name-and-mail">
+            <div class="section">
                 <div class="form-section">
-                    <label for="user-name">Name / Nickname *</label>
-                    <input type="text" id="user-name" name="name" placeholder="Your name">
+                    <label for="user-name">{% t fields.name %} *</label>
+                    <input type="text" id="user-name" name="name" data-required="true">
                 </div>
 
                 <div class="form-section">
-                    <label for="email-address">Email Address *</label>
-                    <input type="email" id="email-address" name="email" placeholder="youremail@gmail.com">
+                    <label for="email-address">{% t fields.email %} *</label>
+                    <input type="email" id="email-address" name="email" data-required="true">
                 </div>
             </div>
 
-            <div class="form-section">
-                <label for="user-message">Message *</label>
-                <textarea id="user-message" name="message" placeholder="Hello..."></textarea>
+            <div class="section">
+                <div class="form-section">
+                    <label for="phone-field">{% t fields.phone %}</label>
+                    <input type="text" id="phone-field" name="phone" data-required="false">
+                </div>
+
+                <div class="form-section">
+                    <label for="reason-select">{% t fields.reason %} *</label>
+                    <select name="reason" id="reason-select">
+                        {% for reason in site.data.contact_reason %}
+                            <option value="{{ reason.value }}">{% t reason.name %}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+
+            <div class="form-section message">
+                <label for="user-message">{% t fields.message %} *</label>
+                <textarea id="user-message" name="message" data-required="true"></textarea>
             </div>
 
             <div class="flex-justify-center">
-                <button type="submit">Send</button>
+                <button type="submit">{% t buttons.send %}</button>
             </div>
         </form>
     </div>
@@ -46,20 +60,15 @@ comments: false
         form.addEventListener('submit', contactFormSubmit);
     });
 
-    const successMsg = "Sending message...";
-    const validatingMsg = "Validating... ";
-    const allOKMsg = "Successful...";
-    const validationErrorMsg = "Unsuccessful...";
+    const successMsg = "{% t success_msg.sending %}";
+    const validatingMsg = "{% t neutral_msg.validating %} ";
+    const allOKMsg = "{% t success_msg.success %}";
+    const validationErrorMsg = "{% t error_msg.unsuccessful %}";
 
     async function contactFormSubmit(event) {
         event.preventDefault();
-        console.log('Form submit event prevented');
 
         resetMessages();
-
-        const userNameInput = document.getElementById('user-name');
-        const emailAddressInput = document.getElementById('email-address');
-        const userMessageInput = document.getElementById('user-message');
 
         const neutralMsgElement = document.querySelector('.neutral-msg');
         const errorMsgElement = document.querySelector('.error-msg');
@@ -69,7 +78,20 @@ comments: false
 
         await new Promise(resolve => setTimeout(resolve, 1000));
 
-        if (userNameInput.value.trim() === '' || emailAddressInput.value.trim() === '' || userMessageInput.value.trim() === '') {
+        const inputFields = document.querySelectorAll('.form-section input');
+
+        let inputErrors = [];
+
+        for (const inputField of inputFields) {
+            if (inputField.dataset.required === 'true' && inputField.value === '') {
+                inputErrors.push(inputField.id);
+            }
+        }
+
+        if (inputErrors.length > 0) {
+            for (const inputError of inputErrors) {
+                document.getElementById(inputError).classList.add('error');
+            }
             await showMessage(errorMsgElement, validationErrorMsg);
             return;
         }

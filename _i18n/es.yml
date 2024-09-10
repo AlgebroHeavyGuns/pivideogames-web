@@ -41,5 +41,29 @@ about_us:
   home_title: Sobre nosotros
   home_desc: 'Somos un pequeño estudio de desarrollo de videojuegos orgullosamente nacido en la provincia de <span class="remarked">Málaga</span>, aunque estamos seguros que nos has visto en diferentes ferias y eventos. <br><br>Nos apasiona conectar con nuevas personas y proyectos, de los cuales aprendemos y nos inspiramos para seguir creciendo. ¡Y nutrirnos de la diversidad y creatividad que nos rodea para impulsar nuestra evolución constante!<br><br>Los juegos de estrategia, gestión, puzles y rol son nuestra especialidad y pasión. Estamos enfocados en crear experiencias de jugador inmersivas con productos atractivos y originales basados en estos géneros.'
 
+fields:
+  name: Nombre
+  email: Correo electrónico
+  phone: Teléfono
+  reason: Razón
+  message: Mensaje
+
+reason_fields:
+  technical_support: Soporte técnico
+  bussiness: Negocios
+  events: Eventos
+  others: Otros
+
+error_msg:
+  unsuccessful: Fallida...
+
+neutral_msg:
+  validating: Validando...
+
+success_msg:
+  sending: Enviando mensaje...
+  success: Exitosa...
+
 buttons:
   know_us: Conocenos
+  send: Enviar

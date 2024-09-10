@@ -296,6 +296,21 @@ body[data-theme="dark"] {
       }
     };
 
+    select {
+      color: $dark-text-base-color;
+      border-bottom: $dark-white 2px solid;
+      background-color: $dark-black;
+
+      option {
+        color: $dark-white;
+        background-color: $dark-black;
+
+        &:active {
+          background-color: $dark-smoke;
+        }
+      }
+    }
+
     textarea {
       color: $dark-text-base-color;
       border: $dark-white 2px solid;

@@ -544,3 +544,154 @@
   }
 
 }
+
+.contact-form {
+  display: block;
+  max-width: $md-wide-size;
+  margin: auto;
+
+  .section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include media-query($on-mobile) {
+      flex-direction: column;
+      gap: 0px;
+    }
+  }
+
+  .contact-msg {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+
+    .neutral-msg {
+      color: yellow;
+    }
+
+    .error-msg {
+      color: red;
+    }
+
+    .success-msg {
+      color: green;
+    }
+  }
+
+
+  .form-section {
+    width: 50%;
+    margin-top: 10px;
+
+    @include media-query($on-mobile) {
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
+
+  .form-section.message {
+    width: 100%;
+  }
+
+  input {
+    display: block;
+    width: 97.5%;
+    border: none;
+    border-bottom: $black 2px solid;
+    padding: 5px;
+    font-size: 15px;
+    background: none;
+    font-family: $primary-font;
+    border-radius: 0px;
+
+    @include media-query($on-mobile) {
+      width: 96%;
+    }
+
+    &::placeholder {
+      color: $gray;
+    }
+    
+    &:focus {
+      outline: none;
+      border-bottom: $text-link-blue 2px solid;
+    }
+
+    &:active {
+      outline: none;
+      border-bottom: $text-link-blue 2px solid;
+    }
+  }
+
+  select {
+    width: 100%;
+    border: none;
+    border-bottom: $black 2px solid;
+    padding: 5px;
+    font-size: 15px;
+    background: none;
+    font-family: $primary-font;
+    border-radius: 0px;
+    background-color: $white;
+
+    option {
+      color: $black;
+      background-color: $white;
+
+      &:active {
+        color: $black;
+        background-color: $smoke;
+      }
+    }
+  }
+
+  textarea {
+    width: 98.5%;
+    min-height: 200px;
+    font-size: 14px;
+    background: none;
+    padding: 5px;
+    border: black 2px solid;
+    font-family: $primary-font;
+    border-radius: 0px;
+
+    @include media-query($on-mobile) {
+      width: 96%;
+    }
+
+
+    &::placeholder {
+      color: $gray;
+    }
+
+    &:focus {
+      outline: none;
+      border: $text-link-blue 2px solid;
+    }
+
+    &:active {
+      outline: none;
+      border: $text-link-blue 2px solid;
+    }
+  }
+
+  button[type="submit"] {
+    width: 100px;
+    padding: 10px;
+    background-color: $text-link-blue;
+    color: $white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    font-family: $secondary-family;
+    font-size: 14px;
+
+
+    &:hover {
+      background-color: $text-link-blue-active;
+    }
+  }
+}

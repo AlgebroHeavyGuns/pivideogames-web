@@ -369,5 +369,11 @@ body[data-theme="dark"] {
       color: $dark-white;
     }
   }
+
+  .events {
+    h2 {
+      border-color: $white;
+    }
+  }
 }
 

@@ -6,3 +6,75 @@ excerpt: pageexcerpt.events
 comments: false
 ---
 
+<div class="events">
+	<div class="next-events">
+		<h2> {% t events.next_title %} </h2>
+		{%- if site.data.events[site.lang].next_events.size > 0 -%}
+			{%- for next_event in site.data.events[site.lang].next_events -%}
+				<div class="event">
+					<article>
+						<div class="event-image">
+							<img src="{{ past_event.image_logo }}" alt="{{ past_event.title }}">
+						</div>
+						<div>
+							<h3> {{ past_event.title }} </h3>
+							<p> {{ past_event.subtitle }} </p>
+							<p> {{ past_event.description }} </p>
+							<p><span class="remarked">{% t events.date %}:</span> {{ past_event.date_string }} </p>
+							<p><span class="remarked">{% t events.location %}:</span> {{ past_event.location_sting }} </p>
+							{%- if past_event.external_link.url != nil -%}
+							<a href="{{ past_event.external_link.url }}" target="_blank">{{ past_event.external_link.text }}</a>
+							{%- endif -%}
+						</div>
+					</article>
+				</div>
+			{%- endfor -%}
+		{%- else -%}
+			<div class="event" style="margin-top: 30px;">
+				<article>
+					<div class="event-image">
+						<img src="/assets/img/pivideogames_logo_fondo.png" style="max-height: 250px;">
+					</div>
+					<div>
+						<h3> {% t events.not_next_events_title %} </h3>
+						<p> {% t events.not_next_events_subtitle_1 %} </p>
+						<p> {% t events.not_next_events_subtitle_2 %} </p>
+					</div>
+				</article>
+			</div>
+		{%- endif -%}
+	</div>
+
+	<div class="old-events">
+		<h2> {% t events.old_title %} </h2>
+
+		{%- for past_event in site.data.events[site.lang].old_events -%}
+		<div class="event">
+			<article>
+				<div class="event-image">
+					<img src="{{ past_event.image_logo }}" alt="{{ past_event.title }}">
+				</div>
+				<div>
+					<h3> {{ past_event.title }} </h3>
+					<p> {{ past_event.subtitle }} </p>
+					<p> {{ past_event.description }} </p>
+					<p><span class="remarked">{% t events.date %}:</span> {{ past_event.date_string }} </p>
+					<p><span class="remarked">{% t events.location %}:</span> {{ past_event.location_sting }} </p>
+					{%- if past_event.external_link.url != nil -%}
+					<a href="{{ past_event.external_link.url }}" target="_blank">{{ past_event.external_link.text }}</a>
+					{%- endif -%}
+				</div>
+			</article>
+			<div class="images-grid">
+				{%- for image in past_event.images -%}
+				<div>
+					<img src="{{ image.image }}">
+					<p> {{ image.foot-image }} </p>
+				</div>
+				{%- endfor -%}
+			</div>
+		</div>
+		{%- endfor -%}
+	</div>
+
+</div>

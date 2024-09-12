@@ -44,6 +44,15 @@ about_us:
   home_title: About us
   home_desc: 'We are a small videogame development studio proudly born in the province of <span class="remarked">Malaga</span>, although we are sure you have seen us at different fairs and events. <br><br>We are passionate about connecting with new people and projects, from which we learn and get inspired to keep growing, and nourish ourselves from the diversity and creativity that surrounds us to drive our constant evolution!<br><br>Strategy, management, puzzle and role-playing games are our speciality and passion. We are focused on creating immersive player experiences with engaging and original products based on these genres.'
 
+events:
+  next_title: Next events
+  old_title: Past events
+  not_next_events_title: To be confirmed
+  not_next_events_subtitle_1: 'We have requested to attend new events!'
+  not_next_events_subtitle_2: 'We are looking forward to joining them and seeing them here!'
+  date: Date
+  location: Location
+
 fields:
   name: Name
   email: Email

@@ -59,6 +59,7 @@
         {%- assign menus = site.data.menus -%}
         {%- if menus %}
           {%- for menu in menus -%}
+          {%- if menu.enabled -%}
             {%- if url == menu.url -%}
               <a class="menu-link active" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">
                 {% t menu.title %}
@@ -74,6 +75,7 @@
                 </a>
               {%- endif -%}
             {%- endif -%}
+          {%- endif -%}
           {%- endfor -%}
         {%- else -%}
           <a class="menu-link {% if url == '/' %}active{% endif %}" href="/">{{ translate.navbar.home }}</a>

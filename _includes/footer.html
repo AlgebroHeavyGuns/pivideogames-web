@@ -1,6 +1,8 @@
 <footer class="footer">
   {%- for menu in site.data.footer-menu -%}
-    <a class="footer_item" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">{% t menu.title %}</a>
+    {%- if menu.enabled -%}
+      <a class="footer_item" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">{% t menu.title %}</a>
+    {%- endif -%}
   {%- endfor -%}
   <!-- <a class="footer_item" href="javascript::void(0)">resume</a>
   <a class="footer_item" href="/feed.xml">rss</a> -->

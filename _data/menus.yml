@@ -1,16 +1,20 @@
 - title: navbar.home
   url: /
-  external: false
+  external: false 
+  enabled: true
 
 - title: navbar.projects
   url: /projects/
   external: false
+  enabled: false
 
 - title: navbar.about
   url: /about/
   external: false
+  enabled: true
 
 - title: navbar.contact
   url: /contact/
   external: false
+  enabled: true
 

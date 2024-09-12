@@ -8,8 +8,10 @@
   image: /assets/img/about-us/algebro.png
   desc: about_us.alejandro_desc
   right_or_left: right
+  img_max_height: 600px
 
 - title: about_us.paula
   image: /assets/img/about-us/perso.png
   desc: about_us.paula_desc
   right_or_left: left
+  img_max_height: 600px

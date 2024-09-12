@@ -1,29 +1,4 @@
-- title: twitch
-  url: https://www.twitch.tv/woolf_ux
-  class: twitch-icon
-  external: true
-
-- title: itch.io
-  url: https://woolf-ux.itch.io
-  class: itch-icon
-  external: true
-
-- title: twitter
-  url: https://x.com/WoolfDev
-  class: twitter-icon
-  external: true
-
-- title: discord
-  url: https://discord.gg/ed8pmQp88v
-  class: discord-icon
-  external: true
-
-- title: youtube
-  url: https://www.youtube.com/channel/UC1KqyrhNoQDhPxLClHRKkqw?sub_confirmation=1
-  class: youtube-icon
-  external: true
-
-- title: instagram
-  url: https://www.instagram.com/woolf.css/
-  class: instagram-icon
+- title: example
+  url: example.com
+  class: class-in-css
   external: true

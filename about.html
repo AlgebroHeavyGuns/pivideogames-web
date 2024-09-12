@@ -10,7 +10,7 @@ comments: false
 	{% assign sections = site.data.about-us-info %}
 	{% if sections %}
 		{% for info in sections %}
-			<section class="about-us-section">
+			<section class="about-us-section-mobile">
 				<div class="content">
 					<div class="image-container {{ info.right_or_left }}">
 						{% if info.img_max_height %}
@@ -24,6 +24,27 @@ comments: false
 					</h3>
 					<div class="description {{ info.right_or_left }}">
 						{% t info.desc %}
+					</div>
+				</div>
+			</section>
+		{% endfor %}
+		{% for info in sections %}
+			<section class="about-us-section">
+				<div class="content">
+					<div class="image-container {{ info.right_or_left }}">
+						{% if info.img_max_height %}
+							<img src="{{ info.image }}" style="max-height: {{ info.img_max_height }}; width: auto;">
+						{% else %}
+							<img src="{{ info.image }}">
+						{% endif %}
+					</div>
+					<div class="info-content {{ info.right_or_left }}">
+						<h3 class="title">
+							{% t info.title %}
+						</h3>
+						<div class="description">
+							{% t info.desc %}
+						</div>
 					</div>
 				</div>
 			</section>

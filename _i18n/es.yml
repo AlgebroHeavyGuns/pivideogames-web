@@ -28,9 +28,6 @@ navbar:
   tags: Etiquetas
   thanks: Agradecimientos
 
-thanks_page:
-  description: 'Muchas gracias a todos los que me han ayudado, apoyado y me han hecho reír al menos una vez en mi vida. Para mí sois el mayor tesoro que una persona puede tener.'
-
 about_us:
   our_team: Nuestro equipo
   our_team_desc: '<span class="remarked">PI Video Games</span> se forja a partir de una chispa de <span class="remarked">inspiración</span>, una idea innovadora que despierta la <span class="remarked">creatividad</span> y la determinación de sus fundadores para sumergirse en su <span class="remarked">pasión</span>. <br><br>Como emprendedores creativos, impulsados por su amor por los videojuegos y su deseo de crear experiencias únicas, se embarcan en la aventura de fundar un estudio de videojuegos y materializar sus ideas en forma de emocionantes experiencias interactivas.'

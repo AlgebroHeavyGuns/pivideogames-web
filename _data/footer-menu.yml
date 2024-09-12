@@ -2,8 +2,3 @@
   url: /tags/
   external: false
   enabled: false
-  
-- title: navbar.thanks
-  url: /thanks/
-  external: false
-  enabled: true

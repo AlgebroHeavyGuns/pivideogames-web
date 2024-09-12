@@ -12,6 +12,11 @@ pagetitles:
   thanks: Agradecimientos
   error_404: Te has perdido ¿no? | You're lost aren't you?
   tags: Etiquetas
+  events: Eventos
+
+pageexcerpt: 
+  about: Sobre Pivideogames Studio
+  events: Eventos de Pivideogames Studio
 
 home:
   title: Pi Video Games
@@ -27,6 +32,7 @@ navbar:
   contact: Contacto
   tags: Etiquetas
   thanks: Agradecimientos
+  events: Eventos
 
 about_us:
   our_team: Nuestro equipo

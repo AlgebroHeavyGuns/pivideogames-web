@@ -59,7 +59,8 @@ layout: compress
             </time>
             <span hidden itemprop="publisher" itemtype="Person">{{ site.author.name }}</span>
             <span hidden itemprop="image">{{ page.image }}</span>
-            <span hidden itemprop="mainEntityOfPage">{{ page.excerpt }}</span>
+            {%- capture page_excerpt -%} {% t page.excerpt %} {%- endcapture -%}
+            <span hidden itemprop="mainEntityOfPage">{{ page_excerpt }}</span>
           </div>
           {% endif %}
         </header>

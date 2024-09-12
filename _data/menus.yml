@@ -13,6 +13,11 @@
   external: false
   enabled: true
 
+- title: navbar.events
+  url: /events/
+  external: false
+  enabled: true
+
 - title: navbar.contact
   url: /contact/
   external: false

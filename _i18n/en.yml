@@ -12,6 +12,11 @@ pagetitles:
   thanks: Acknowledgements
   error_404: Te has perdido ¿no? | You're lost aren't you?
   tags: Tags
+  events: Events
+
+pageexcerpt:
+  about: About Pivideogames Studio
+  events: Events of Pivideogames Studio
 
 home:
   title: Pi Video Games
@@ -27,7 +32,7 @@ navbar:
   contact: Contact
   tags: Tags
   thanks: Acknowledgements
-
+  events: Events
 
 about_us:
   our_team: Our Team
@@ -38,6 +43,15 @@ about_us:
   paula_desc: 'Talented founder and illustrator, who has found in the production of video games the perfect canvas to express her creativity and passion for art. With a unique style and exceptional aesthetic vision, she is dedicated to captivating gamers with her stunning illustrations and designs, always striving for aesthetic excellence in every project she undertakes. <br><br> At a very young age, Paula discovered her love for drawing and illustration, developing her own distinctive style that has led her to excel in a variety of projects. Paula has perfected her technique and acquired the necessary skills to create amazing and immersive visual worlds. <br><br> As a founder, she has become a reference, standing out for masterfully expressing her originality, seeking to push her own limits and achieve excellence, inspiring other artists and designers. Each game she creates is a work that reflects her dedication, talent and passion for art. <br><br> For Paula, video game production is much more than just a job: it is an opportunity to express her boundless creativity and share her art with the world. Every illustration, every character design and every scenario created is the result of hours of dedication and effort, with the aim of captivating players and immersing them in visually stunning universes.'
   home_title: About us
   home_desc: 'We are a small videogame development studio proudly born in the province of <span class="remarked">Malaga</span>, although we are sure you have seen us at different fairs and events. <br><br>We are passionate about connecting with new people and projects, from which we learn and get inspired to keep growing, and nourish ourselves from the diversity and creativity that surrounds us to drive our constant evolution!<br><br>Strategy, management, puzzle and role-playing games are our speciality and passion. We are focused on creating immersive player experiences with engaging and original products based on these genres.'
+
+events:
+  next_title: Next events
+  old_title: Past events
+  not_next_events_title: To be confirmed
+  not_next_events_subtitle_1: 'We have requested to attend new events!'
+  not_next_events_subtitle_2: 'We are looking forward to joining them and seeing them here!'
+  date: Date
+  location: Location
 
 fields:
   name: Name

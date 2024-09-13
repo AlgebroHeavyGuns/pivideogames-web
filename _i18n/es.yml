@@ -12,6 +12,11 @@ pagetitles:
   thanks: Agradecimientos
   error_404: Te has perdido ¿no? | You're lost aren't you?
   tags: Etiquetas
+  events: Eventos
+
+pageexcerpt: 
+  about: Sobre Pivideogames Studio
+  events: Eventos de Pivideogames Studio
 
 home:
   title: Pi Video Games
@@ -27,6 +32,7 @@ navbar:
   contact: Contacto
   tags: Etiquetas
   thanks: Agradecimientos
+  events: Eventos
 
 about_us:
   our_team: Nuestro equipo
@@ -37,6 +43,15 @@ about_us:
   paula_desc: 'Talentosa fundadora e ilustradora, que ha encontrado en la producción de videojuegos el lienzo perfecto para plasmar su creatividad y pasión por el arte. Con un estilo único y una visión estética excepcional, se dedica a cautivar a los jugadores con sus impresionantes ilustraciones y diseños, buscando siempre la excelencia estética en cada proyecto que emprende. <br><br>Siendo muy joven, Paula descubrió su amor por el dibujo y la ilustración, desarrollando un estilo propio y distintivo que la ha llevado a destacarse en diversos proyectos. Paula ha perfeccionado su técnica y ha adquirido las habilidades necesarias para crear mundos visuales sorprendentes y envolventes. <br><br>Como fundadora, se ha convertido en una referente, destacándose por exprimir su originalidad de manera magistral, buscando superar sus propios límites y alcanzar la excelencia, inspirando a otros artistas y diseñadores. Cada juego que crea es una obra que refleja su dedicación, talento y pasión por el arte. <br><br>Para Paula, la producción de videojuegos es mucho más que un trabajo: es una ocasión para expresar su creatividad sin límites y compartir su arte con el mundo entero. Cada ilustración, cada diseño de personaje y cada escenario creado son fruto de horas de dedicación y esfuerzo, con el objetivo de cautivar a los jugadores y sumergirlos en universos visualmente impactantes.'
   home_title: Sobre nosotros
   home_desc: 'Somos un pequeño estudio de desarrollo de videojuegos orgullosamente nacido en la provincia de <span class="remarked">Málaga</span>, aunque estamos seguros que nos has visto en diferentes ferias y eventos. <br><br>Nos apasiona conectar con nuevas personas y proyectos, de los cuales aprendemos y nos inspiramos para seguir creciendo. ¡Y nutrirnos de la diversidad y creatividad que nos rodea para impulsar nuestra evolución constante!<br><br>Los juegos de estrategia, gestión, puzles y rol son nuestra especialidad y pasión. Estamos enfocados en crear experiencias de jugador inmersivas con productos atractivos y originales basados en estos géneros.'
+
+events:
+  next_title: Próximos eventos 
+  old_title: Eventos anteriores
+  not_next_events_title: Por confirmar
+  not_next_events_subtitle_1: '¡Hemos solicitado asistir a nuevos eventos!'
+  not_next_events_subtitle_2: '¡Esperamos tomar parte en ellos y veros por allí!'
+  date: Fecha
+  location: Ubicación
 
 fields:
   name: Nombre

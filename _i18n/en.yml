@@ -33,6 +33,7 @@ navbar:
   tags: Tags
   thanks: Acknowledgements
   events: Events
+  footer_text: Web powered by Woolfdev (https://www.woolfgamedev.com/) for Pi Video Games. Special thanks to his/her job.
 
 about_us:
   our_team: Our Team

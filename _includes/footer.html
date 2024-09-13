@@ -1,7 +1,15 @@
 <footer class="footer">
   {%- for menu in site.data.footer-menu -%}
     {%- if menu.enabled -%}
-      <a class="footer_item" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">{% t menu.title %}</a>
+      {%- if menu.external -%}
+        <a class="menu-link" href="{{ menu.url }}" target="_blank" rel="noopener">
+          {% t menu.title %}
+        </a>
+      {%- else -%}
+        <a class="menu-link" href="{% if site.lang != site.default_lang %}/{{ site.lang }}{% endif %}{{ menu.url }}">
+          {% t menu.title %}
+        </a>
+      {%- endif -%}
     {%- endif -%}
   {%- endfor -%}
   <!-- <a class="footer_item" href="javascript::void(0)">resume</a>

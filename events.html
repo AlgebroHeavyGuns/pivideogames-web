@@ -33,7 +33,7 @@ comments: false
 			<div class="event" style="margin-top: 30px;">
 				<article>
 					<div class="event-image">
-						<img src="/assets/img/pivideogames_logo_fondo.png" style="max-height: 250px;">
+						<img src="/assets/img/pivideogames_logo_fondo.png" style="max-height: 250px;" loading="lazy">
 					</div>
 					<div>
 						<h3> {% t events.not_next_events_title %} </h3>
@@ -52,7 +52,7 @@ comments: false
 		<div class="event">
 			<article>
 				<div class="event-image">
-					<img src="{{ past_event.image_logo }}" alt="{{ past_event.title }}">
+					<img src="{{ past_event.image_logo }}" alt="{{ past_event.title }}" loading="lazy">
 				</div>
 				<div>
 					<h3> {{ past_event.title }} </h3>
@@ -69,7 +69,7 @@ comments: false
 				{%- for image in past_event.images -%}
 					<div>
 						<a href="{{ image.image }}" data-pswp-width="" data-pswp-height="" class="image">
-							<img src="{{ image.image }}">
+							<img src="{{ image.image }}" loading="lazy">
 						</a>
 						<p> {{ image.foot-image }} </p>
 					</div>

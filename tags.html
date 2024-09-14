@@ -20,7 +20,10 @@ excerpt: Sorted article by tags.
     <article class="post-item" id="results-container">
       <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
       <h3 class="post-item-title">
-        <a href="{{ post.url }}">{{ post.title | escape }}</a>
+        {%- if post.title -%}
+          {%- capture post_title -%} {% t post.title %} {%- endcapture -%}
+        {%- endif -%}
+        <a href="{{ post.url }}">{{ post_title | escape }}</a>
       </h3> 
     </article>
   {%- endfor -%}

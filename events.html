@@ -68,7 +68,7 @@ comments: false
 			<div class="images-grid">
 				{%- for image in past_event.images -%}
 					<div>
-						<a href="{{ image.image }}" target="_blank">
+						<a href="{{ image.image }}" data-pswp-width="" data-pswp-height="" class="image">
 							<img src="{{ image.image }}">
 						</a>
 						<p> {{ image.foot-image }} </p>
@@ -81,13 +81,35 @@ comments: false
 
 </div>
 
-<script>
+<script type="module">
 	import PhotoSwipeLightbox from '/assets/photoswipe/photoswipe-lightbox.esm.js';
-
-	const lightbox = new PhotoSwipeLightbox({
-  		gallery: '.images-grid',
-  		children: 'a',
-  	pswpModule: () => import('/assets/photoswipe/photoswipe.esm.js')
-});
-lightbox.init();
+	
+	function updateImageSizes() {
+	  const imagesGrid = document.querySelectorAll('.images-grid img');
+	
+	  imagesGrid.forEach((img) => {
+		const link = img.closest('a.image');
+		
+		if (img.complete) {
+		  link.dataset.pswpWidth = img.naturalWidth;
+		  link.dataset.pswpHeight = img.naturalHeight;
+		} else {
+		  img.onload = () => {
+			link.dataset.pswpWidth = img.naturalWidth;
+			link.dataset.pswpHeight = img.naturalHeight;
+		  };
+		}
+	  });
+	}
+	
+	window.addEventListener('load', () => {
+	  updateImageSizes();
+	
+	  const lightbox = new PhotoSwipeLightbox({
+		gallery: '.images-grid',
+		children: 'a.image',
+		pswpModule: () => import('/assets/photoswipe/photoswipe.esm.js')
+	  });
+	  lightbox.init();
+	});
 </script>

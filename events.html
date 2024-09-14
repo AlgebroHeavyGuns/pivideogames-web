@@ -67,10 +67,12 @@ comments: false
 			</article>
 			<div class="images-grid">
 				{%- for image in past_event.images -%}
-				<div>
-					<img src="{{ image.image }}">
-					<p> {{ image.foot-image }} </p>
-				</div>
+					<div>
+						<a href="{{ image.image }}" target="_blank">
+							<img src="{{ image.image }}">
+						</a>
+						<p> {{ image.foot-image }} </p>
+					</div>
 				{%- endfor -%}
 			</div>
 		</div>
@@ -78,3 +80,14 @@ comments: false
 	</div>
 
 </div>
+
+<script>
+	import PhotoSwipeLightbox from '/assets/photoswipe/photoswipe-lightbox.esm.js';
+
+	const lightbox = new PhotoSwipeLightbox({
+  		gallery: '.images-grid',
+  		children: 'a',
+  	pswpModule: () => import('/assets/photoswipe/photoswipe.esm.js')
+});
+lightbox.init();
+</script>

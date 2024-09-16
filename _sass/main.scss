@@ -9,13 +9,15 @@ $medium-font-size: $base-font-size * 0.938;
 $small-font-size: $base-font-size * 0.875;
 $base-line-height: 1.85;
 
+$primary-color: #7599EA;
+
 // Author variables
 $author-font-size: 16px;
 
 // Variables de colores
 $navbar-link-color: #333;
-$navbar-link-hover-color: #003fff;
-$active-link-color: #ff9800;
+$navbar-link-hover-color: $primary-color;
+$active-link-color: $primary-color;
 
 // Font weight
 // $light-weight: 300; // uncomment if necessary
@@ -25,10 +27,8 @@ $bold-weight: 700;
 
 //Light Colors
 $text-base-color: #434648;
-$text-link-blue: #003fff;
-$text-link-blue-active: #0036c7;
-
-$primary-color: #7599EA;
+$text-link-blue: $primary-color;
+$text-link-blue-active: #556fab;
 
 $black: #0d122b;
 $light: #ececec;
@@ -38,8 +38,8 @@ $white: #fff;
 
 // Dark Colors
 $dark-text-base-color: #c7bebe;
-$dark-text-link-blue: #ff5277;
-$dark-text-link-blue-active: #ff2957;
+$dark-text-link-blue: $primary-color;
+$dark-text-link-blue-active: #9ebafc;
 
 $dark-black: #131418;
 $dark-white: #eaeaea;

@@ -18,14 +18,14 @@ es:
       description: 'Tuvimos la oportunidad, gracias al equipo de <a href="http://oniroidstudios.com/lapsus/" target="_blank">Oniroid Studios</a>, de presentar una demo aún muy en pañales, de Mind of War. Ahí obtuvimos un feedback temprano que nos ayudase a enfocar mejor el resto del desarrollo, tomar buenas notas, y llenarnos de motivación y energías para seguir trabajando en nuestro proyecto.'
       date_string: 21 y 22 de Octubre de 2023
       location_sting: FERMASA (Granada)
-      image_logo: /assets/img/events/granada_gaming.jpg
+      image_logo: /assets/img/events/granada-gaming-2023/granada_gaming.jpg
       external_link:
       images:
-        - image: /assets/img/events/reseñas_probando_demo.jpg
+        - image: /assets/img/events/granada-gaming-2023/reseñas_probando_demo.jpg
           foot-image: '<a href="https://x.com/ResenasCortas" target="_blank">Reseñas Cortas</a> probando la demo.'
-        - image: /assets/img/events/kyntasias_probando_demo.jpg
+        - image: /assets/img/events/granada-gaming-2023/kyntasias_probando_demo.jpg
           foot-image: '<a href="https://x.com/kyntasia" target="_blank">Kyntasia</a> probando la demo. '
-        - image: /assets/img/events/foto_stand_junto_lapsus_oniroid_studios.jpg
+        - image: /assets/img/events/granada-gaming-2023/foto_stand_junto_lapsus_oniroid_studios.jpg
           foot-image: 'Stand de Mind of War junto a Lapsus de <a href="http://oniroidstudios.com/lapsus/" target="_blank">Oniroid Studios</a>'
 
 
@@ -49,12 +49,12 @@ en:
       description: 'We had the opportunity, thanks to the team of <a href="http://oniroidstudios.com/lapsus/" target="_blank">Oniroid Studios</a>, to present a demo even more in detail, of Mind of War. Here we got a quick feedback that helped us to focus better on the rest of the development, take good notes, and fill ourselves with motivation and energy to continue working on our project.'
       date_string: 21 and 22 of October of 2023
       location_sting: FERMASA (Granada)
-      image_logo: /assets/img/events/granada_gaming.jpg
+      image_logo: /assets/img/events/granada-gaming-2023/granada_gaming.jpg
       external_link: 
       images:
-        - image: /assets/img/events/reseñas_probando_demo.jpg
+        - image: /assets/img/events/granada-gaming-2023/reseñas_probando_demo.jpg
           foot-image: <a href="https://x.com/ResenasCortas" target="_blank">Reseñas Cortas</a> testing the demo.
-        - image: /assets/img/events/kyntasias_probando_demo.jpg
+        - image: /assets/img/events/granada-gaming-2023/kyntasias_probando_demo.jpg
           foot-image: <a href="https://x.com/kyntasia" target="_blank">Kyntasia</a> testing the demo.
-        - image: /assets/img/events/foto_stand_junto_lapsus_oniroid_studios.jpg
+        - image: /assets/img/events/granada-gaming-2023/foto_stand_junto_lapsus_oniroid_studios.jpg
           foot-image: 'Stand of Mind of War together with Lapsus of <a href="http://oniroidstudios.com/lapsus/" target="_blank">Oniroid Studios</a>'

@@ -6,7 +6,7 @@ tags: projects
 permalink: /mind-of-war/
 ---
 
-**Hello!** As many of you already know, we are working very hard to release the first Early Access version of our beloved project, Mind of War.
+**Hello!** As many of you already know, we are working very hard to release the first Early Access version of our beloved project, **Mind of War**.
 We also wanted to work on a new website that will serve as a reference point to get to know each other and share with you many aspects about our studio, news, status updates on our projects (current and future), and keep a closer contact with our community.
 
 <div class="triple-column">

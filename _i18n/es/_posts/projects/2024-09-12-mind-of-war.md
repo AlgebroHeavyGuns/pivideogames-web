@@ -6,7 +6,7 @@ tags: projects
 permalink: /mind-of-war/
 ---
 
-**¡Hola!** Como muchas personas ya sabréis, estamos trabajando muy duro para sacar la primera versión en Acceso Anticipado de nuestro querido proyecto, Mind of War.
+**¡Hola!** Como muchas personas ya sabréis, estamos trabajando muy duro para sacar la primera versión en Acceso Anticipado de nuestro querido proyecto, **Mind of War**.
 También hemos querido trabajar en una nueva página web que sirva como punto de referencia para conocernos y compartir con vosotros muchos aspecto sobre nuestro estudio, noticias, actualización del estado de nuestro proyectos (actuales y futuros), y mantener un contacto más cercano con nuestra comunidad.
 
 <div class="triple-column">

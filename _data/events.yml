@@ -7,11 +7,17 @@ es:
       description: '<span class="remarked">GUADALINDIE</span>, en el Palacio de Ferias y Congresos de Málaga, nuestro primer evento como equipo y anunciando la reciente publicación de la página de Steam de Mind of War.  Con una organización, puesta en marcha, y ponencias de las más altas categorías, se ha convertido en una convención de grandes personas y profesionales del mundo de los viejos.'
       date_string: 3 y 4 de Mayo de 2024
       location_sting: Palacio de Ferias y Congresos de Málaga.
-      image_logo: /assets/img/events/guadalindie_icon.png
+      image_logo: /assets/img/events/guadalindie-2024/guadalindie_icon.png
       external_link:
         text: Ver web de Guadalinde
         url: https://guadalindie.com/
       images:
+        - image: /assets/img/events/guadalindie-2024/den-jugando-mow.jpg
+          foot-image: '<a href="https://x.com/den_pixel" target="_blank">DenPixelArt</a> probando la demo.'
+        - image: /assets/img/events/guadalindie-2024/pivideogames-en-guadalindie.jpg
+          foot-image: 'Pi Video Games en Guadalindie.'
+        - image: /assets/img/events/guadalindie-2024/stand-mow-guadalindie.jpeg
+          foot-image: 'Stand de Mind of War en Guadalindie.'
     
     - title: Granada Gaming (Oct. - 2023)
       subtitle:
@@ -38,11 +44,17 @@ en:
       description: '<span class="remarked">GUADALINDE</span>, in the Trade Fairs and Congress Centre of Malaga., our first event as a team and announcing the recent publication of the Steam page of Mind of War.  With an organization, set up, and top-ranking categories, it has become a convention of great people and professionals from the world of the old.'
       date_string: 3 and 4 of May of 2024
       location_sting: Trade Fairs and Congress Centre of Malaga.
-      image_logo: /assets/img/events/guadalindie_icon.png
+      image_logo: /assets/img/events/guadalindie-2024/guadalindie_icon.png
       external_link:
         text: View web of Guadalinde
         url: https://guadalindie.com/
       images:
+        - image: /assets/img/events/guadalindie-2024/den-jugando-mow.jpg
+          foot-image: '<a href="https://x.com/den_pixel" target="_blank">DenPixelArt</a> testing the demo.'
+        - image: /assets/img/events/guadalindie-2024/pivideogames-en-guadalindie.jpg
+          foot-image: 'Pi Video Games in Guadalindie.'
+        - image: /assets/img/events/guadalindie-2024/stand-mow-guadalindie.jpeg
+          foot-image: 'Stand of Mind of War in Guadalindie.'
     
     - title: Granada Gaming (Oct. - 2023)
       subtitle: A great event held on the 21st and 22nd of October!

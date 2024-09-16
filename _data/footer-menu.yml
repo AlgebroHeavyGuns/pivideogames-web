@@ -1,4 +1,4 @@
 - title: navbar.footer_text
-  url: /tags/
-  external: false
+  url: https://woolfgamedev.com
+  external: true
   enabled: true

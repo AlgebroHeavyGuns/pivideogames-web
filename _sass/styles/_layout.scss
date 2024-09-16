@@ -854,9 +854,13 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
       gap: 20px;
 
+      margin-bottom: 40px;
+
       @include media-query($on-mobile) {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+
+        margin-bottom: 20px;
       }
 
       img {

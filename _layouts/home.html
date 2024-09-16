@@ -14,7 +14,7 @@ home: true
 {%- include steam_section.html steam_code="2960010" -%}
 
 
-<h3 class="posts-item-note" aria-label="Recent Posts">Recent Posts</h3>
+<h3 class="posts-item-note" aria-label="{% t home.recent_posts %}">{% t home.recent_posts %}</h3>
 {%- for post in site.posts limit: site.number_of_posts -%}
 {%- capture post_title -%}{% t post.title %}{%- endcapture -%}
 

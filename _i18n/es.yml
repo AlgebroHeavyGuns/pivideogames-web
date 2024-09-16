@@ -11,7 +11,7 @@ pagetitles:
   projects: Proyectos
   thanks: Agradecimientos
   error_404: Te has perdido ¿no? | You're lost aren't you?
-  tags: Etiquetas
+  all_posts: Todos los artículos
   events: Eventos
 
 pageexcerpt: 
@@ -30,9 +30,10 @@ navbar:
   about: Sobre nosotros
   projects: Proyectos
   contact: Contacto
-  tags: Etiquetas
+  all_posts: Etiquetas
   thanks: Agradecimientos
   events: Eventos
+  footer_text: Web realizada por Woolfdev (https://www.woolfgamedev.com/) para Pi Video Games. Agradecimientos especiales a su trabajo.
 
 about_us:
   our_team: Nuestro equipo
@@ -79,3 +80,6 @@ success_msg:
 buttons:
   know_us: Conocenos
   send: Enviar
+
+post_titles:
+  mow_a1: Mind of War anuncio

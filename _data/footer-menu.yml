@@ -1,4 +1,4 @@
-- title: navbar.tags
+- title: navbar.footer_text
   url: /tags/
   external: false
-  enabled: false
+  enabled: true

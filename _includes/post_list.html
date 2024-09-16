@@ -1,0 +1,11 @@
+<h3 class="posts-item-note" aria-label="{% t home.recent_posts %}">{% t home.recent_posts %}</h3>
+{%- for post in site.posts limit: site.number_of_posts -%}
+{%- capture post_title -%}{% t post.title %}{%- endcapture -%}
+
+<article class="post-item">
+  <span class="post-item-date">{{ post.date | date: "%b %d, %Y" }}</span>
+  <h4 class="post-item-title">
+    <a href="{{ post.url }}">{{ post_title | escape }}</a>
+  </h4>
+</article>
+{%- endfor -%}

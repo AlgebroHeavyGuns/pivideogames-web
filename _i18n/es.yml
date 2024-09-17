@@ -10,13 +10,13 @@ pagetitles:
   contact: Contacto
   projects: Proyectos
   thanks: Agradecimientos
-  error_404: Te has perdido ¿no? | You're lost aren't you?
+  error_404: Te has perdido ¿no? | You're lost, aren't you?
   all_posts: Todos los artículos
   events: Eventos
 
 pageexcerpt: 
-  about: Sobre Pivideogames Studio
-  events: Eventos de Pivideogames Studio
+  about: Sobre Pi video games studio
+  events: Eventos de Pi video games studio
 
 home:
   title: Pi Video Games
@@ -34,7 +34,7 @@ navbar:
   all_posts: Etiquetas
   thanks: Agradecimientos
   events: Eventos
-  footer_text: Web realizada por Woolfdev (https://www.woolfgamedev.com/) para Pi Video Games. Agradecimientos especiales a su trabajo.
+  footer_text: Web realizada por Woolfdev para Pi Video Games. Agradecimientos especiales a su trabajo.
 
 about_us:
   our_team: Nuestro equipo

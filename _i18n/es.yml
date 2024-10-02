@@ -81,6 +81,8 @@ success_msg:
 buttons:
   know_us: Conocenos
   send: Enviar
+  previous: Anterior
+  next: Siguiente
 
 post_titles:
   mow_a1: Mind of War anuncio

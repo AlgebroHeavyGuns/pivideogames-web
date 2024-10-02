@@ -81,6 +81,8 @@ success_msg:
 buttons:
   know_us: Know us
   send: Send
+  previous: Previous
+  next: Next
 
 post_titles:
   mow_a1: Mind of War announcement

@@ -3,7 +3,7 @@ layout: post
 title: post_titles.mow_a2
 date: 2024-09-30 19:30:00 +0000
 tags: sales
-permalink: /mind-of-war/
+permalink: /mind-of-war-rpg-fest/
 ---
 
 **¡Ya hemos publicado la primera versión del Acceso Anticipado de Mind of War!**

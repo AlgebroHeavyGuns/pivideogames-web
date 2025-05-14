@@ -406,13 +406,13 @@
 
 .steam-section {
   width: 100%;
-  margin-bottom: 50px;
+  margin-bottom: 140px;
   height: 600px;
   position: relative;
 
   @include media-query($on-mobile) {
     height: 250px;
-    margin-bottom: 140px;
+    margin-bottom: 185px;
   }
 
   .steam-bg-config {
@@ -429,7 +429,7 @@
 
   .widget {
     position: absolute;
-    bottom: -50px;
+    bottom: -140px;
     width: 100%;
     height: auto;
 
@@ -438,7 +438,7 @@
     align-items: center;
 
     @include media-query($on-mobile) {
-      bottom: -130px;
+      bottom: -185px;
     }
 
     iframe {

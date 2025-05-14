@@ -12,8 +12,8 @@ _(Yes, and we didn't tell you about it here, we're really sorry)_
 But there's one more piece of news! We're participating in the **Steam RPG Festival** - take advantage of the launch offer and get Mind of War at a special price.
 
 <div class="single-column">
-    <a class="image-link" href="/assets/posts/mind-of-war/steamfest_rpg.jpg">
-        <img src="/assets/posts/mind-of-war/steamfest_rpg.jpg">
+    <a class="image-link" href="/assets/posts/events/steamfest_rpg.jpg">
+        <img src="/assets/posts/events/steamfest_rpg.jpg">
     </a>
 </div>
 

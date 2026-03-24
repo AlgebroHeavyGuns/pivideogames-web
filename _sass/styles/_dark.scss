@@ -375,5 +375,109 @@ body[data-theme="dark"] {
       border-color: $white;
     }
   }
+
+  // Promo Admin Panel Dark Mode
+  .login-container, .admin-panel {
+    background: $dark-black;
+    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+  }
+
+  .form-group label {
+    color: $dark-white;
+  }
+
+  .form-control {
+    border: 2px solid $dark-light;
+    background: $dark-black;
+    color: $dark-white;
+    
+    &::placeholder {
+      color: $dark-gray;
+    }
+    
+    &:focus {
+      border-color: $dark-text-link-blue;
+    }
+  }
+
+  .btn-primary {
+    background: $dark-text-link-blue;
+    color: $dark-white;
+    
+    &:hover {
+      background: $dark-text-link-blue-active;
+    }
+  }
+
+  .table {
+    th,
+    td {
+      border-bottom: 1px solid $dark-light;
+      color: $dark-white;
+    }
+    
+    th {
+      background: $dark-light;
+    }
+    
+    tr:hover {
+      background: rgba(117, 153, 234, 0.1);
+    }
+  }
+
+  .alert {
+    &.alert-success {
+      background: #1e4d2b;
+      border-color: #2d5a3d;
+      color: #b7e4c7;
+    }
+    
+    &.alert-error {
+      background: #4d1e1e;
+      border-color: #5a2d2d;
+      color: #f8d7da;
+    }
+    
+    &.alert-info {
+      background: #1e3c4d;
+      border-color: #2d485a;
+      color: #bee5eb;
+    }
+  }
+
+  .stat-card {
+    background: $dark-black;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+  }
+
+  .stat-number {
+    color: $dark-text-link-blue;
+  }
+
+  .stat-label {
+    color: $dark-white;
+  }
+
+  .modal {
+    background: rgba(0, 0, 0, 0.7);
+  }
+
+  .modal-content {
+    background: $dark-black;
+  }
+
+  .modal-title {
+    color: $dark-white;
+  }
+
+  .close {
+    color: $dark-white;
+  }
+
+  .btn.disabled,
+  .btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+  }
 }
 

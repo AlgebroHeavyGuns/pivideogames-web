@@ -11,6 +11,7 @@ pagetitles:
   projects: Proyectos
   thanks: Agradecimientos
   error_404: Te has perdido ¿no? | You're lost, aren't you?
+  admin_promo_code: Admin de Códigos Promocionales
   all_posts: Todos los artículos
   events: Eventos
 
@@ -88,3 +89,38 @@ post_titles:
   mow_a1: Mind of War anuncio
   mow_a2: Festival RPG de Steam
   mow_a3: Temporada de Halloween!
+  mow_a4: Nueva campaña Fuego y sombras
+  mow_a5: Fuengirola Indie Game Show
+  mow_a6: Nueva campaña Luces y sombras
+
+promo_admin:
+  login_title: Acceso al Panel de Administración
+  login_description: Introduce los tokens de autenticación para acceder al panel de administración de códigos promocionales.
+  get_token_label: Token de Consulta (requerido)
+  get_token_placeholder: Token para consultar códigos existentes
+  create_token_label: Token de Creación (opcional)
+  create_token_placeholder: Token para crear nuevos códigos
+  delete_token_label: Token de Eliminación (opcional)
+  delete_token_placeholder: Token para eliminar códigos
+  login_button: Iniciar Sesión
+  admin_title: Panel de Administración - Códigos Promocionales
+  refresh: Actualizar
+  create_new: Crear Nuevo
+  logout: Cerrar Sesión
+  total_codes: Total de Códigos
+  total_redeemed: Total Canjeados
+  unused_codes: Códigos Sin Usar
+  cancel: Cancelar
+  create: Crear
+  table:
+    code: Código
+    description: Contexto
+    redeemed: Canjeados
+    created: Fecha Creación
+    actions: Acciones
+  create_modal:
+    title: Crear Nuevo Código Promocional
+    code_label: Código Promocional
+    code_placeholder: Introduce el código (ej. DESCUENTO50)
+    description_label: Contexto
+    description_placeholder: Contexto del cofre

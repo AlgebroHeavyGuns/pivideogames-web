@@ -1,0 +1,102 @@
+---
+title: pagetitles.admin_promo_code
+permalink: /admin-promo-codes/
+layout: page
+comments: false
+---
+
+<div class="promo-admin">
+    <div id="loginSection" class="login-container">
+        <h2>{% t promo_admin.login_title %}</h2>
+        <p>{% t promo_admin.login_description %}</p>
+        
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="getToken">{% t promo_admin.get_token_label %}</label>
+                <input type="password" id="getToken" class="form-control" placeholder="{% t promo_admin.get_token_placeholder %}">
+            </div>
+            
+            <div class="form-group">
+                <label for="createToken">{% t promo_admin.create_token_label %}</label>
+                <input type="password" id="createToken" class="form-control" placeholder="{% t promo_admin.create_token_placeholder %}">
+            </div>
+            
+            <div class="form-group">
+                <label for="deleteToken">{% t promo_admin.delete_token_label %}</label>
+                <input type="password" id="deleteToken" class="form-control" placeholder="{% t promo_admin.delete_token_placeholder %}">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">{% t promo_admin.login_button %}</button>
+        </form>
+        
+        <div id="loginError" class="alert alert-error hidden"></div>
+    </div>
+
+    <div id="adminPanel" class="admin-panel hidden">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+            <h2>{% t promo_admin.admin_title %}</h2>
+            <div>
+                <button id="refreshBtn" class="btn btn-primary btn-sm">{% t promo_admin.refresh %}</button>
+                <button id="createBtn" class="btn btn-success btn-sm">{% t promo_admin.create_new %}</button>
+                <button id="logoutBtn" class="btn btn-danger btn-sm">{% t promo_admin.logout %}</button>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <div id="totalCodes" class="stat-number">0</div>
+                <div class="stat-label">{% t promo_admin.total_codes %}</div>
+            </div>
+            <div class="stat-card">
+                <div id="totalRedeemed" class="stat-number">0</div>
+                <div class="stat-label">{% t promo_admin.total_redeemed %}</div>
+            </div>
+            <div class="stat-card">
+                <div id="unusedCodes" class="stat-number">0</div>
+                <div class="stat-label">{% t promo_admin.unused_codes %}</div>
+            </div>
+        </div>
+        
+        <div id="message" class="alert hidden"></div>
+        
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>{% t promo_admin.table.code %}</th>
+                        <th>{% t promo_admin.table.description %}</th>
+                        <th>{% t promo_admin.table.redeemed %}</th>
+                        <th>{% t promo_admin.table.created %}</th>
+                        <th>{% t promo_admin.table.actions %}</th>
+                    </tr>
+                </thead>
+                <tbody id="codesTableBody">
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<div id="createModal" class="modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3 class="modal-title">{% t promo_admin.create_modal.title %}</h3>
+            <button class="close" id="closeCreateModal">&times;</button>
+        </div>
+        <form id="createCodeForm">
+            <div class="form-group">
+                <label for="newPromoCode">{% t promo_admin.create_modal.code_label %}</label>
+                <input type="text" id="newPromoCode" class="form-control" placeholder="{% t promo_admin.create_modal.code_placeholder %}" required>
+            </div>
+            <div class="form-group">
+                <label for="newDescription">{% t promo_admin.create_modal.description_label %}</label>
+                <textarea id="newDescription" class="form-control" rows="3" placeholder="{% t promo_admin.create_modal.description_placeholder %}" required></textarea>
+            </div>
+            <div style="display: flex; gap: 10px; justify-content: flex-end;">
+                <button type="button" class="btn btn-primary" id="cancelCreate">{% t promo_admin.cancel %}</button>
+                <button type="submit" class="btn btn-success">{% t promo_admin.create %}</button>
+            </div>
+        </form>
+    </div>
+</div>
+<script src="{{ '/assets/js/promo-admin.js' | relative_url }}"></script>

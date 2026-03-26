@@ -280,9 +280,19 @@ class PromoCodeAdmin {
             const row = document.createElement('tr');
             const escapedPromoCode = this.escapeHtml(code.promo_code);
             
+            const getDescriptionText = (context) => {
+                if (!context || !context.description) return 'Sin descripción';
+                
+                if (typeof context.description === 'object') {
+                    return JSON.stringify(context.description, null, 2);
+                }
+                
+                return context.description;
+            };
+            
             row.innerHTML = `
                 <td><strong>${escapedPromoCode}</strong></td>
-                <td>${code.context && code.context.description ? this.escapeHtml(code.context.description) : 'Sin descripción'}</td>
+                <td><pre style="white-space: pre-wrap; margin: 0;">${this.escapeHtml(getDescriptionText(code.context))}</pre></td>
                 <td>${code.quantity_redeemed}</td>
                 <td>${new Date(code.created_at).toLocaleDateString()}</td>
                 <td>
@@ -298,7 +308,6 @@ class PromoCodeAdmin {
             tbody.appendChild(row);
         });
 
-        // Update statistics
         const totalCodesEl = document.getElementById('totalCodes');
         const totalRedeemedEl = document.getElementById('totalRedeemed');
         const unusedCodesEl = document.getElementById('unusedCodes');

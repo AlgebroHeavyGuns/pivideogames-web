@@ -273,26 +273,48 @@ class PromoCodeAdmin {
         let totalRedeemed = 0;
         let unusedCodes = 0;
 
-        this.codes.forEach(code => {
+        this.codes.forEach((code, index) => {
             totalRedeemed += code.quantity_redeemed;
             if (code.quantity_redeemed === 0) unusedCodes++;
 
             const row = document.createElement('tr');
             const escapedPromoCode = this.escapeHtml(code.promo_code);
             
-            const getDescriptionText = (context) => {
+            const getDescriptionDisplay = (context, rowId) => {
                 if (!context || !context.description) return 'Sin descripción';
                 
+                let fullText = '';
                 if (typeof context.description === 'object') {
-                    return JSON.stringify(context.description, null, 2);
+                    fullText = JSON.stringify(context.description, null, 2);
+                } else {
+                    fullText = context.description;
                 }
                 
-                return context.description;
+                if (fullText.length <= 150) {
+                    return `<pre style="white-space: pre-wrap; margin: 0;">${this.escapeHtml(fullText)}</pre>`;
+                }
+                
+                const shortText = fullText.substring(0, 100) + '...';
+                const escapedFullText = this.escapeHtml(fullText);
+                const escapedShortText = this.escapeHtml(shortText);
+                
+                return `
+                    <div class="description-container">
+                        <pre class="description-short" id="short-desc-${rowId}" style="white-space: pre-wrap; margin: 0; display: block;">${escapedShortText}</pre>
+                        <pre class="description-full" id="full-desc-${rowId}" style="white-space: pre-wrap; margin: 0; display: none;">${escapedFullText}</pre>
+                        <button class="btn btn-link btn-sm toggle-description" 
+                                onclick="window.promoAdmin.toggleDescription('${rowId}')" 
+                                id="toggle-btn-${rowId}"
+                                style="padding: 2px 8px; font-size: 12px; margin-top: 5px;">
+                            Ver más
+                        </button>
+                    </div>
+                `;
             };
             
             row.innerHTML = `
                 <td><strong>${escapedPromoCode}</strong></td>
-                <td><pre style="white-space: pre-wrap; margin: 0;">${this.escapeHtml(getDescriptionText(code.context))}</pre></td>
+                <td>${getDescriptionDisplay(code.context, index)}</td>
                 <td>${code.quantity_redeemed}</td>
                 <td>${new Date(code.created_at).toLocaleDateString()}</td>
                 <td>
@@ -406,6 +428,26 @@ class PromoCodeAdmin {
             "'": '&#039;'
         };
         return text.replace(/[&<>"']/g, function(m) { return map[m]; });
+    }
+
+    toggleDescription(rowId) {
+        const shortEl = document.getElementById(`short-desc-${rowId}`);
+        const fullEl = document.getElementById(`full-desc-${rowId}`);
+        const toggleBtn = document.getElementById(`toggle-btn-${rowId}`);
+        
+        if (!shortEl || !fullEl || !toggleBtn) return;
+        
+        if (shortEl.style.display === 'none') {
+            // Currently showing full, switch to short
+            shortEl.style.display = 'block';
+            fullEl.style.display = 'none';
+            toggleBtn.textContent = 'Ver más';
+        } else {
+            // Currently showing short, switch to full
+            shortEl.style.display = 'none';
+            fullEl.style.display = 'block';
+            toggleBtn.textContent = 'Ver menos';
+        }
     }
 }
 

@@ -409,6 +409,18 @@ body[data-theme="dark"] {
     }
   }
 
+  .btn-link {
+    color: $dark-text-link-blue;
+    
+    &:hover {
+      color: $dark-text-link-blue-active;
+    }
+    
+    &:focus {
+      outline: 2px solid $dark-text-link-blue;
+    }
+  }
+
   .table {
     th,
     td {
@@ -478,6 +490,12 @@ body[data-theme="dark"] {
   .btn:disabled {
     opacity: 0.4;
     cursor: not-allowed;
+  }
+
+  // Description toggle dark mode styles
+  .description-short, .description-full {
+    background-color: $dark-light;
+    border: 1px solid $dark-smoke;
   }
 }
 
